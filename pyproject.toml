@@ -15,5 +15,5 @@ dependencies = [
 Repository = "https://github.com/f1tzcarrald0/comfyui-cvt"
 
 [tool.comfy]
-PublisherId = "REPLACE_WITH_YOUR_PUBLISHER_ID"
+PublisherId = "f1tzcarrald0"
 DisplayName = "CVT - Cinematic Video Tools"
