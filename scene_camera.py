@@ -1,10 +1,10 @@
 """
 ComfyUI Custom Node: SceneCamera
 Takes a scene image and a camera movement selection, then generates
-a Sora 2 optimized video prompt using a preset prompt template for
+an optimized video prompt using a preset prompt template for
 the chosen camera move. No vision analysis required.
 
-Outputs a single Sora-ready video prompt.
+Outputs a single video-ready prompt.
 """
 
 CAMERA_MOVES = {
@@ -144,7 +144,7 @@ CAMERA_MOVE_NAMES = list(CAMERA_MOVES.keys())
 
 
 class SceneCamera:
-    """Takes a scene image and generates a Sora 2 camera-movement video prompt."""
+    """Takes a scene image and generates a camera-movement video prompt."""
 
     @classmethod
     def INPUT_TYPES(cls):
@@ -162,7 +162,7 @@ class SceneCamera:
     RETURN_TYPES = ("STRING",)
     RETURN_NAMES = ("video_prompt",)
     FUNCTION = "build"
-    CATEGORY = "SoraUtils"
+    CATEGORY = "CVT"
     OUTPUT_NODE = False
 
     def build(self, image, camera_move):

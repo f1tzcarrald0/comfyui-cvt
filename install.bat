@@ -2,7 +2,7 @@
 setlocal EnableExtensions EnableDelayedExpansion
 
 echo ============================================
-echo   SoraUtils Installer for ComfyUI
+echo   CVT Installer for ComfyUI
 echo ============================================
 echo.
 echo A folder picker will open. Select:
@@ -67,12 +67,12 @@ if not defined PYTHON_EXE if not defined PIP_EXE (
 
 set "SOURCE_DIR=%~dp0"
 if "!SOURCE_DIR:~-1!"=="\" set "SOURCE_DIR=!SOURCE_DIR:~0,-1!"
-set "DEST_DIR=!COMFY_DIR!\custom_nodes\SoraUtils"
+set "DEST_DIR=!COMFY_DIR!\custom_nodes\CVT"
 
 echo.
-echo Copying SoraUtils to: !DEST_DIR!
+echo Copying CVT to: !DEST_DIR!
 if exist "!DEST_DIR!" (
-    echo Removing existing SoraUtils installation...
+    echo Removing existing CVT installation...
     rmdir /s /q "!DEST_DIR!"
 )
 
@@ -123,7 +123,7 @@ if defined PYTHON_EXE (
 
 echo.
 echo ============================================
-echo   SoraUtils installed successfully!
+echo   CVT installed successfully!
 echo   Restart ComfyUI to load the new nodes.
 echo ============================================
 echo.

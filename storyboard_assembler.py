@@ -81,7 +81,7 @@ The final image must look like a professional cinematographer's contact sheet: n
     RETURN_TYPES = ("STRING", "STRING",)
     RETURN_NAMES = ("assembled_prompt", "shot_list_preview",)
     FUNCTION = "assemble"
-    CATEGORY = "SoraUtils"
+    CATEGORY = "CVT"
     OUTPUT_NODE = False
 
     def _parse_shots(self, raw_text):

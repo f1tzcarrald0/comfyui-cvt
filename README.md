@@ -1,6 +1,6 @@
-# SoraUtils
+# CVT - Cinematic Video Tools
 
-Cinematic video prompt tools for OpenAI Sora 2 in ComfyUI.
+Cinematic video prompt tools for ComfyUI.
 
 ## Nodes
 
@@ -8,10 +8,10 @@ Cinematic video prompt tools for OpenAI Sora 2 in ComfyUI.
 Builds 1-3 shot video prompts with per-shot controls for camera motion, framing, color grading, mood, and lighting. Supports image-driven parameter extraction via CLIP, Qwen 3 VL, Gemini, ChatGPT, Claude, or the ComfyUI API proxy.
 
 ### SceneCamera
-Takes a scene image and a camera movement selection, outputs a Sora 2 optimized video prompt with 25 camera move presets (push in, orbit, crane, dolly zoom, drone, steadicam, etc.).
+Takes a scene image and a camera movement selection, outputs an optimized video prompt with 25 camera move presets (push in, orbit, crane, dolly zoom, drone, steadicam, etc.).
 
 ### Storyboard Assembler
-Parses 9 shot descriptions from Gemini API output and assembles them into a Nano Banana Pro prompt for a 3x3 cinematic contact sheet.
+Parses 9 shot descriptions from Gemini API output and assembles them into a prompt for a 3x3 cinematic contact sheet.
 
 ### Extract First Frame
 Extracts a single frame from a VIDEO input as an IMAGE.
@@ -30,15 +30,15 @@ Converts a list of images into a batched IMAGE tensor.
 Install via the [Comfy Registry](https://registry.comfy.org):
 
 ```
-comfy node install comfyui-sora-utils
+comfy node install comfyui-cvt
 ```
 
 Or clone into your `custom_nodes` directory:
 
 ```
 cd ComfyUI/custom_nodes
-git clone https://github.com/jfonxgit/comfyui-sora-utils.git
-pip install -r comfyui-sora-utils/requirements.txt
+git clone https://github.com/f1tzcarrald0/comfyui-cvt.git
+pip install -r comfyui-cvt/requirements.txt
 ```
 
 ## Example Workflows

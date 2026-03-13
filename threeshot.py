@@ -1,10 +1,10 @@
 """
 ComfyUI Custom Node: ThreeShot
-Assembles a 1–3 shot video prompt for Sora with per-shot camera, lighting,
+Assembles a 1–3 shot video prompt with per-shot camera, lighting,
 color, mood, and action controls. Supports image-driven parameter
 extraction via CLIP, Qwen 3 VL, Gemini, ChatGPT, or Claude.
 
-Outputs a single Sora-ready video prompt.
+Outputs a single video-ready prompt.
 """
 
 from .presets import (
@@ -54,7 +54,7 @@ _IMAGE_PARAMS = {
 # ─────────────────────────────────────────────
 
 class ThreeShot:
-    """Builds a 1–3 shot Sora video prompt from structured cinematic parameters."""
+    """Builds a 1–3 shot video prompt from structured cinematic parameters."""
 
     @classmethod
     def INPUT_TYPES(cls):
@@ -141,25 +141,24 @@ class ThreeShot:
     RETURN_TYPES = ("STRING",)
     RETURN_NAMES = ("video_prompt",)
     FUNCTION = "build"
-    CATEGORY = "SoraUtils"
+    CATEGORY = "CVT"
     OUTPUT_NODE = False
 
-    # ── Format a single shot as a Sora-ready prose paragraph ──
+    # ── Format a single shot as a video-ready prose paragraph ──
 
     def _format_shot_prose(self, prompt, camera_motion, shot_type,
                            color_grading, mood, lighting_style,
                            subject_description=""):
-        """Build a Sora 2 optimized video prompt block for one shot.
+        """Build an optimized video prompt block for one shot.
 
         Format: rich prose scene description (front-loaded with the most
         important visual details) followed by structured cinematography,
-        lighting, and color-palette blocks.  Targets the 80–150 word
-        sweet spot that Sora 2 responds to best.
+        lighting, and color-palette blocks.
         """
         lines = []
 
         # ── Scene prose ──
-        # Sora 2 best practice: place primary visual content in the
+        # Best practice: place primary visual content in the
         # first ~500 characters so the model locks on early.
         scene_parts = []
         if subject_description and subject_description.strip():
@@ -305,7 +304,7 @@ class ThreeShot:
                 comfy_auth_token=comfy_auth_token, comfy_api_key=comfy_api_key,
             )
 
-            # Sora 2 best practice: repeat subject traits in every
+            # Best practice: repeat subject traits in every
             # shot so the model maintains character consistency.
             sub_desc = (
                 subject_description.strip()
@@ -323,7 +322,7 @@ class ThreeShot:
             )
             shot_paragraphs.append(paragraph)
 
-        # ── Assemble the final Sora 2 video prompt ──
+        # ── Assemble the final video prompt ──
         prompt_parts = []
 
         # Style preamble (visual style spine shared across all shots)
@@ -331,7 +330,7 @@ class ThreeShot:
             prompt_parts.append(style_prompt.strip())
 
         # Shot blocks — subject description is woven into each shot's
-        # scene prose for cross-shot character consistency (Sora 2 best practice).
+        # scene prose for cross-shot character consistency (Best practice).
         if count == 1:
             prompt_parts.append(shot_paragraphs[0])
         else:

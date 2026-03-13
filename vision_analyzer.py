@@ -1,5 +1,5 @@
 """
-SoraUtils Vision Analyzer
+CVT Vision Analyzer
 Analyzes images to extract cinematic parameters using one of 6 model backends:
   - CLIP (local zero-shot classification)
   - Qwen 3 VL 8b (local VLM, auto-downloaded)
@@ -83,7 +83,7 @@ def _load_clip():
             "CLIP backend requires the 'transformers' package.\n"
             "Install it with: pip install transformers accelerate"
         )
-    print("[ThreeShot] Loading CLIP model (openai/clip-vit-large-patch14-336)...")
+    print("[CVT] Loading CLIP model (openai/clip-vit-large-patch14-336)...")
     _clip_processor = CLIPProcessor.from_pretrained(
         "openai/clip-vit-large-patch14-336"
     )
@@ -93,7 +93,7 @@ def _load_clip():
     _clip_model.eval()
     device = "cuda" if torch.cuda.is_available() else "cpu"
     _clip_model.to(device)
-    print("[ThreeShot] CLIP model loaded.")
+    print("[CVT] CLIP model loaded.")
 
 
 def _analyze_clip(pil_image, presets):
@@ -131,8 +131,8 @@ def _load_qwen():
             "Install it with: pip install transformers accelerate"
         )
     model_id = "Qwen/Qwen3-VL-8B"
-    print(f"[ThreeShot] Loading Qwen 3 VL 8B ({model_id})...")
-    print("[ThreeShot] This may download several GB on first run.")
+    print(f"[CVT] Loading Qwen 3 VL 8B ({model_id})...")
+    print("[CVT] This may download several GB on first run.")
     _qwen_processor = AutoProcessor.from_pretrained(model_id, trust_remote_code=True)
     _qwen_model = AutoModelForCausalLM.from_pretrained(
         model_id,
@@ -141,7 +141,7 @@ def _load_qwen():
         trust_remote_code=True,
     )
     _qwen_model.eval()
-    print("[ThreeShot] Qwen 3 VL 8B loaded.")
+    print("[CVT] Qwen 3 VL 8B loaded.")
 
 
 def _analyze_qwen(pil_image, prompt):

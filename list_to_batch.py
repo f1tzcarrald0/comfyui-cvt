@@ -19,7 +19,7 @@ class ListToBatch:
     RETURN_TYPES = ("IMAGE",)
     FUNCTION = "execute"
     INPUT_IS_LIST = True
-    CATEGORY = "SoraUtils"
+    CATEGORY = "CVT"
 
     def execute(self, image):
         shape = image[0].shape[1:3]

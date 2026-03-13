@@ -3,7 +3,7 @@
 set -u
 
 echo "============================================"
-echo "  SoraUtils Installer for ComfyUI (macOS)"
+echo "  CVT Installer for ComfyUI (macOS)"
 echo "============================================"
 echo
 echo "A folder picker will open. Select:"
@@ -162,12 +162,12 @@ if [[ -z "$PYTHON_EXE" && -z "$PIP_EXE" ]]; then
 fi
 
 SOURCE_DIR="$(cd "$(dirname "$0")" && pwd)"
-DEST_DIR="$COMFY_DIR/custom_nodes/SoraUtils"
+DEST_DIR="$COMFY_DIR/custom_nodes/CVT"
 
 echo
-echo "Copying SoraUtils to: $DEST_DIR"
+echo "Copying CVT to: $DEST_DIR"
 if [[ -d "$DEST_DIR" ]]; then
-  echo "Removing existing SoraUtils installation..."
+  echo "Removing existing CVT installation..."
   rm -rf "$DEST_DIR"
 fi
 
@@ -239,7 +239,7 @@ fi
 
 echo
 echo "============================================"
-echo "  SoraUtils installed successfully!"
+echo "  CVT installed successfully!"
 echo "  Restart ComfyUI to load the new nodes."
 echo "============================================"
 echo

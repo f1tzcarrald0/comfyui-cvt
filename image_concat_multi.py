@@ -29,7 +29,7 @@ class ImageConcanate:
 
     RETURN_TYPES = ("IMAGE",)
     FUNCTION = "concatenate"
-    CATEGORY = "SoraUtils"
+    CATEGORY = "CVT"
     DESCRIPTION = """
     Concatenates the image2 to image1 in the specified direction.
     """
@@ -120,7 +120,7 @@ class ImageConcatMulti:
     RETURN_TYPES = ("IMAGE",)
     RETURN_NAMES = ("images",)
     FUNCTION = "combine"
-    CATEGORY = "SoraUtils"
+    CATEGORY = "CVT"
     DESCRIPTION = """
     Creates an image from multiple images.
     You can set how many inputs the node has, with the **inputcount** and clicking update.

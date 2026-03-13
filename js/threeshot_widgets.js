@@ -1,5 +1,5 @@
 /**
- * SoraUtils – ThreeShot dynamic widget management
+ * CVT – ThreeShot dynamic widget management
  *
  * Handles showing/hiding widgets and image input sockets based on:
  *   - shot_count (1/2/3)            → hide inactive shot parameters
@@ -112,7 +112,7 @@ function getParamInfo(n, param) {
 // ─────────────────────────────────────────────
 
 app.registerExtension({
-    name: "SoraUtils.ThreeShot",
+    name: "CVT.ThreeShot",
 
     async beforeRegisterNodeDef(nodeType, nodeData, _app) {
         if (nodeData.name !== "ThreeShot") return;

@@ -20,7 +20,7 @@ class SimpleGate:
     RETURN_TYPES = ("*",)
     RETURN_NAMES = ("output",)
     FUNCTION = "gate"
-    CATEGORY = "SoraUtils"
+    CATEGORY = "CVT"
 
     def gate(self, value, enabled):
         if enabled:
@@ -44,7 +44,7 @@ class SimpleGateString:
     RETURN_TYPES = ("STRING",)
     RETURN_NAMES = ("output",)
     FUNCTION = "gate"
-    CATEGORY = "SoraUtils"
+    CATEGORY = "CVT"
 
     def gate(self, value, enabled):
         if enabled:
@@ -68,7 +68,7 @@ class SimpleGateImage:
     RETURN_TYPES = ("IMAGE",)
     RETURN_NAMES = ("output",)
     FUNCTION = "gate"
-    CATEGORY = "SoraUtils"
+    CATEGORY = "CVT"
 
     def gate(self, value, enabled):
         if enabled:

@@ -1,7 +1,7 @@
 [project]
-name = "comfyui-sora-utils"
+name = "comfyui-cvt"
 version = "1.0.0"
-description = "Cinematic video prompt tools for Sora 2 — ThreeShot sequences, storyboard assembly, scene camera moves, and vision-driven parameter extraction via CLIP, Qwen, Gemini, ChatGPT, or Claude."
+description = "Cinematic video prompt tools for ComfyUI — ThreeShot sequences, storyboard assembly, scene camera moves, and vision-driven parameter extraction via CLIP, Qwen, Gemini, ChatGPT, or Claude."
 license = { file = "LICENSE" }
 requires-python = ">=3.9"
 dependencies = [
@@ -12,8 +12,8 @@ dependencies = [
 ]
 
 [project.urls]
-Repository = "https://github.com/jfonxgit/comfyui-sora-utils"
+Repository = "https://github.com/f1tzcarrald0/comfyui-cvt"
 
 [tool.comfy]
 PublisherId = "REPLACE_WITH_YOUR_PUBLISHER_ID"
-DisplayName = "SoraUtils"
+DisplayName = "CVT - Cinematic Video Tools"

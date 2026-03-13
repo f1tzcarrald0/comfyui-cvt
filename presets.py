@@ -1,5 +1,5 @@
 """
-SoraUtils Preset Lists
+CVT Preset Lists
 Centralized preset definitions for all shot parameters.
 """
 

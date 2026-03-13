@@ -29,7 +29,7 @@ class ExtractFirstFrame:
     RETURN_TYPES = ("IMAGE",)
     RETURN_NAMES = ("frame",)
     FUNCTION = "extract"
-    CATEGORY = "SoraUtils"
+    CATEGORY = "CVT"
 
     def extract(self, video, frame_index=0):
         # video is a VideoInput object; get_components() returns VideoComponents
