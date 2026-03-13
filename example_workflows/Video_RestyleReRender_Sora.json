@@ -1,0 +1,890 @@
+{
+  "id": "3ad55376-a392-4434-9214-c8f574278268",
+  "revision": 0,
+  "last_node_id": 19,
+  "last_link_id": 20,
+  "nodes": [
+    {
+      "id": 11,
+      "type": "LoadImage",
+      "pos": [
+        89.0739438274766,
+        307.9740263632506
+      ],
+      "size": [
+        282.798828125,
+        314
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            19
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "ComfyUI_00398_.png",
+        "image"
+      ]
+    },
+    {
+      "id": 17,
+      "type": "LoadVideo",
+      "pos": [
+        90.70565609580945,
+        -44.43921438286669
+      ],
+      "size": [
+        282.798828125,
+        233.0743408203125
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            18
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadVideo",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "InputVideo_Dog.mp4",
+        "image"
+      ]
+    },
+    {
+      "id": 9,
+      "type": "SaveVideo",
+      "pos": [
+        1114.675868407605,
+        -76.83681685480362
+      ],
+      "size": [
+        1319.785733236613,
+        843.7555146488253
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 20
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "SaveVideo",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "video/ComfyUI",
+        "auto",
+        "auto"
+      ]
+    },
+    {
+      "id": 18,
+      "type": "b3f4f03a-6848-4a92-bde3-f36fe17a87fa",
+      "pos": [
+        747.8104465741885,
+        205.52947859797194
+      ],
+      "size": [
+        264.8328233855332,
+        152.57028859619686
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 18
+        },
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 19
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            20
+          ]
+        }
+      ],
+      "properties": {
+        "proxyWidgets": [
+          [
+            "8",
+            "model"
+          ]
+        ],
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 19,
+      "type": "Note",
+      "pos": [
+        743.0638714135036,
+        402.85609346660283
+      ],
+      "size": [
+        269.37119267524236,
+        137.96542075130503
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "This workflow allows you to take an input video and a reference style image, and will generate a prompt to re-render an approximation of your source video restyled to match your reference image's style. It is not a true v2v style transfer but can be used to iterate and and test a general video concept with different art direction for example."
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    }
+  ],
+  "links": [
+    [
+      18,
+      17,
+      0,
+      18,
+      0,
+      "VIDEO"
+    ],
+    [
+      19,
+      11,
+      0,
+      18,
+      1,
+      "IMAGE"
+    ],
+    [
+      20,
+      18,
+      0,
+      9,
+      0,
+      "VIDEO"
+    ]
+  ],
+  "groups": [],
+  "definitions": {
+    "subgraphs": [
+      {
+        "id": "b3f4f03a-6848-4a92-bde3-f36fe17a87fa",
+        "version": 1,
+        "state": {
+          "lastGroupId": 0,
+          "lastNodeId": 17,
+          "lastLinkId": 17,
+          "lastRerouteId": 0
+        },
+        "revision": 0,
+        "config": {},
+        "name": "Video_RestyleReRender",
+        "inputNode": {
+          "id": -10,
+          "bounding": [
+            -544.1755101998822,
+            173.52947859797194,
+            120,
+            80
+          ]
+        },
+        "outputNode": {
+          "id": -20,
+          "bounding": [
+            2059.7964033482594,
+            183.52947859797194,
+            120,
+            60
+          ]
+        },
+        "inputs": [
+          {
+            "id": "4de28e4c-e4d7-4d66-a4c8-720b5f24633f",
+            "name": "video",
+            "type": "VIDEO",
+            "linkIds": [
+              16,
+              15
+            ],
+            "localized_name": "video",
+            "pos": [
+              55,
+              20
+            ]
+          },
+          {
+            "id": "f25e486f-a87b-4a1c-bfd1-fcd9bfc3bd04",
+            "name": "images",
+            "type": "IMAGE",
+            "linkIds": [
+              10
+            ],
+            "localized_name": "images",
+            "shape": 7,
+            "pos": [
+              55,
+              40
+            ]
+          }
+        ],
+        "outputs": [
+          {
+            "id": "e2427972-b91f-4e1a-bf75-fbdd5d836607",
+            "name": "VIDEO",
+            "type": "VIDEO",
+            "linkIds": [
+              8
+            ],
+            "localized_name": "VIDEO",
+            "pos": [
+              20,
+              20
+            ]
+          }
+        ],
+        "widgets": [],
+        "nodes": [
+          {
+            "id": 16,
+            "type": "ExtractFirstFrame",
+            "pos": [
+              -244.04667563623386,
+              -252.21001714444827
+            ],
+            "size": [
+              270,
+              58
+            ],
+            "flags": {},
+            "order": 8,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "video",
+                "name": "video",
+                "type": "VIDEO",
+                "link": 16
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "frame",
+                "name": "frame",
+                "type": "IMAGE",
+                "links": [
+                  17
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "ExtractFirstFrame",
+              "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+              0
+            ]
+          },
+          {
+            "id": 2,
+            "type": "GeminiNode",
+            "pos": [
+              -358.2330710479434,
+              299.07726663530104
+            ],
+            "size": [
+              400,
+              316
+            ],
+            "flags": {},
+            "order": 1,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "images",
+                "name": "images",
+                "shape": 7,
+                "type": "IMAGE",
+                "link": 10
+              },
+              {
+                "localized_name": "audio",
+                "name": "audio",
+                "shape": 7,
+                "type": "AUDIO",
+                "link": null
+              },
+              {
+                "localized_name": "video",
+                "name": "video",
+                "shape": 7,
+                "type": "VIDEO",
+                "link": null
+              },
+              {
+                "localized_name": "files",
+                "name": "files",
+                "shape": 7,
+                "type": "GEMINI_INPUT_FILES",
+                "link": null
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "STRING",
+                "name": "STRING",
+                "type": "STRING",
+                "links": [
+                  1
+                ]
+              }
+            ],
+            "title": "Google Gemini -Style Analysis",
+            "properties": {
+              "Node name for S&R": "GeminiNode",
+              "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+              "Describe the exact visual style of this image. Ignore the subject matter — focus only on the artistic treatment, color, lighting, texture, and technique so the same style can be applied to different content.",
+              "gemini-3-pro-preview",
+              448352084122843,
+              "randomize",
+              "You are a visual style analyst. You will receive a reference image and must describe its visual style with enough precision that an AI image generator could replicate the exact same aesthetic on completely different subject matter.\n\nDo NOT describe the content or subject of the image (ignore what the image is \"of\"). Describe ONLY how it looks — the artistic and technical treatment.\n\nDescribe these attributes:\n\nMEDIUM AND TECHNIQUE: What does this look like it was made with? (oil paint, watercolor, digital illustration, film photography, charcoal, gouache, ink wash, cel animation, 3D render, collage, etc.) Describe the visible mark-making — brushstrokes, texture, grain, line quality, edge treatment (sharp/soft/lost edges).\n\nCOLOR PALETTE: Describe the overall palette — warm/cool dominance, saturation level, hue range. Name the specific dominant colors and accent colors. Describe how color is used — flat vs graduated, naturalistic vs stylized, muted vs vibrant. Note any color harmony (complementary, analogous, triadic, monochromatic).\n\nLIGHTING STYLE: Quality of light (soft diffused, hard directional, flat, dramatic chiaroscuro, rim-lit, backlit). Contrast ratio (low/medium/high). Shadow characteristics (soft/hard, colored/neutral, transparent/opaque). Highlight treatment (specular, bloom, matte).\n\nTEXTURE AND SURFACE: Overall surface quality — smooth and polished, rough and tactile, grainy, noisy, clean. Any visible paper/canvas texture. Digital artifacts or analog imperfections that define the look.\n\nCOMPOSITION STYLE: How space is used — dense/sparse, centered/asymmetric, use of negative space, depth layering. Any distinctive framing tendencies.\n\nMOOD AND ATMOSPHERE: The emotional quality conveyed purely through the visual treatment — not through subject matter. (e.g., \"hazy and dreamlike due to low contrast and desaturated warm tones\" not \"sad because the person looks lonely\")\n\nREFERENCE TOUCHSTONES: If the style clearly evokes a known artistic movement, era, medium, or genre (e.g., \"French impressionism\", \"1970s film photography\", \"Studio Ghibli background art\", \"fashion editorial\"), name it.\n\nWrite as a single continuous paragraph. Use comma-separated descriptive phrases. This description will be used directly as a style instruction for an image generator, so phrase everything as attributes to apply, not observations about an image.\n\nExample output format:\n\"gouache painting style, visible brushstrokes with soft feathered edges, muted earth-tone palette dominated by warm ochre and dusty rose with slate blue accents, low-contrast soft diffused lighting with transparent violet shadows, slightly textured paper surface visible through thin paint application, atmospheric and nostalgic mood, reminiscent of mid-century children's book illustration\""
+            ],
+            "color": "#432",
+            "bgcolor": "#653"
+          },
+          {
+            "id": 10,
+            "type": "PreviewImage",
+            "pos": [
+              1370.7905843119538,
+              463.2689743403922
+            ],
+            "size": [
+              140,
+              246
+            ],
+            "flags": {},
+            "order": 6,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "images",
+                "name": "images",
+                "type": "IMAGE",
+                "link": 9
+              }
+            ],
+            "outputs": [],
+            "properties": {
+              "Node name for S&R": "PreviewImage",
+              "widget_ue_connectable": {}
+            },
+            "widgets_values": []
+          },
+          {
+            "id": 8,
+            "type": "OpenAIVideoSora2",
+            "pos": [
+              1599.7964033482592,
+              -22.087035290534565
+            ],
+            "size": [
+              400,
+              254
+            ],
+            "flags": {},
+            "order": 5,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "image",
+                "name": "image",
+                "shape": 7,
+                "type": "IMAGE",
+                "link": 12
+              },
+              {
+                "localized_name": "prompt",
+                "name": "prompt",
+                "type": "STRING",
+                "widget": {
+                  "name": "prompt"
+                },
+                "link": 6
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "VIDEO",
+                "name": "VIDEO",
+                "type": "VIDEO",
+                "links": [
+                  8
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "OpenAIVideoSora2",
+              "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+              "sora-2",
+              "",
+              "1280x720",
+              8,
+              1007339130,
+              "randomize"
+            ],
+            "color": "#432",
+            "bgcolor": "#653"
+          },
+          {
+            "id": 3,
+            "type": "GeminiImage2Node",
+            "pos": [
+              851.0368151007963,
+              53.717461331684234
+            ],
+            "size": [
+              400,
+              348
+            ],
+            "flags": {},
+            "order": 2,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "images",
+                "name": "images",
+                "shape": 7,
+                "type": "IMAGE",
+                "link": 17
+              },
+              {
+                "localized_name": "files",
+                "name": "files",
+                "shape": 7,
+                "type": "GEMINI_INPUT_FILES",
+                "link": null
+              },
+              {
+                "localized_name": "prompt",
+                "name": "prompt",
+                "type": "STRING",
+                "widget": {
+                  "name": "prompt"
+                },
+                "link": 3
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "IMAGE",
+                "name": "IMAGE",
+                "type": "IMAGE",
+                "links": [
+                  9,
+                  11
+                ]
+              },
+              {
+                "localized_name": "STRING",
+                "name": "STRING",
+                "type": "STRING",
+                "links": null
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "GeminiImage2Node",
+              "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+              "",
+              "gemini-3-pro-image-preview",
+              284016975265680,
+              "randomize",
+              "auto",
+              "2K",
+              "IMAGE",
+              "You are an expert image-generation engine. You must ALWAYS produce an image.\nInterpret all user input—regardless of format, intent, or abstraction—as literal visual directives for image composition.\nIf a prompt is conversational or lacks specific visual details, you must creatively invent a concrete visual scenario that depicts the concept.\nPrioritize generating the visual representation above any text, formatting, or conversational requests."
+            ],
+            "color": "#432",
+            "bgcolor": "#653"
+          },
+          {
+            "id": 1,
+            "type": "GeminiNode",
+            "pos": [
+              -364.1755101998822,
+              -50.85546297431855
+            ],
+            "size": [
+              400,
+              316
+            ],
+            "flags": {},
+            "order": 0,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "images",
+                "name": "images",
+                "shape": 7,
+                "type": "IMAGE",
+                "link": null
+              },
+              {
+                "localized_name": "audio",
+                "name": "audio",
+                "shape": 7,
+                "type": "AUDIO",
+                "link": null
+              },
+              {
+                "localized_name": "video",
+                "name": "video",
+                "shape": 7,
+                "type": "VIDEO",
+                "link": 15
+              },
+              {
+                "localized_name": "files",
+                "name": "files",
+                "shape": 7,
+                "type": "GEMINI_INPUT_FILES",
+                "link": null
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "STRING",
+                "name": "STRING",
+                "type": "STRING",
+                "links": [
+                  6
+                ]
+              }
+            ],
+            "title": "Google Gemini - Video Analysis",
+            "properties": {
+              "Node name for S&R": "GeminiNode",
+              "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+              "Analyze this video in full detail. Describe everything visible — the environment, subjects, every action and movement, camera behavior, and lighting — so that the scene could be faithfully recreated from your description alone.",
+              "gemini-3-pro-preview",
+              817339102187852,
+              "randomize",
+              "You are a precise video analyst. You will receive a video and must describe everything happening in it with enough detail that someone could recreate it without ever seeing the original.\n\nDescribe the following in order:\n\n1. SCENE: The physical environment — location type, architecture, surfaces, objects, weather, time of day, ambient conditions.\n\n2. SUBJECTS: Every person, animal, or key object — their physical appearance, clothing, positioning, and spatial relationship to each other and the environment.\n\n3. ACTION SEQUENCE: Frame-by-frame description of what happens from start to finish. Be specific about:\n   - Movement direction, speed, and trajectory\n   - Body mechanics (which hand reaches, which foot steps, head turns left vs right)\n   - Facial expressions and gaze direction at key moments\n   - Object interactions (what touches what, when)\n   - Timing and pacing (what happens simultaneously vs sequentially)\n\n4. CAMERA: Describe the camera behavior throughout:\n   - Starting framing (wide, medium, close-up) and any changes\n   - Camera movement (static, pan, tilt, dolly, handheld shake, zoom)\n   - Angle (eye-level, low, high, Dutch)\n   - Focus behavior (deep focus, rack focus, follow focus)\n\n5. LIGHTING: Light sources, direction, quality (hard/soft), color temperature, shadows, any changes over the duration.\n\n6. AUDIO CUES (if perceivable from visual context): Implied sounds from actions — footsteps, impacts, speech (describe gestures even if you can't hear words), ambient sounds suggested by the environment.\n\nWrite in present tense, as if narrating the video as it plays. Be factual and specific — no interpretation, no artistic commentary, no quality judgments. Use precise spatial language (left/right from camera's perspective, foreground/background, frame-left/frame-right).\n\nOutput as continuous prose organized by the sections above. Do not use bullet points."
+            ],
+            "color": "#432",
+            "bgcolor": "#653"
+          },
+          {
+            "id": 5,
+            "type": "StringConcatenate",
+            "pos": [
+              142.32257284277946,
+              278.01797949313044
+            ],
+            "size": [
+              400,
+              200
+            ],
+            "flags": {
+              "collapsed": true
+            },
+            "order": 4,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "string_a",
+                "name": "string_a",
+                "type": "STRING",
+                "widget": {
+                  "name": "string_a"
+                },
+                "link": 2
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "STRING",
+                "name": "STRING",
+                "type": "STRING",
+                "links": [
+                  3
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "StringConcatenate",
+              "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+              "",
+              "CRITICAL RULES:\n- COMPOSITION LOCK: The output must be a pixel-accurate recreation of the source image's layout. Every subject must be in the same position, same pose, same scale, same cropping. Do not reframe, recompose, or reinterpret the scene in any way.\n- SUBJECT FIDELITY: All people, objects, and environmental elements from the source image must be present and recognizable. Faces must retain their identity, expression, and gaze direction. Body positions, hand placements, and clothing must match exactly.\n- ENVIRONMENT PRESERVATION: Architecture, furniture, objects, background elements, spatial depth, and perspective must remain identical to the source image. Only their visual rendering style changes.\n- STYLE APPLICATION: Apply the described style treatment uniformly across the entire image — color palette, lighting quality, texture, mark-making, edge treatment, and atmospheric mood must match the style description. The image should look as though the original scene was captured or created using the described medium and technique from the start.\n- NO CONTENT CHANGES: Do not add, remove, move, or alter any element from the source image. Do not change the time of day, weather, or environmental conditions unless the style description explicitly implies it (e.g., a \"golden hour warm tone\" style may shift color temperature but not scene geometry).\n\nThe output should look like the source image was re-created from scratch in the described style — same scene, same moment, completely different visual treatment.",
+              ""
+            ]
+          },
+          {
+            "id": 4,
+            "type": "StringConcatenate",
+            "pos": [
+              150.1955210302467,
+              232.99078139920243
+            ],
+            "size": [
+              398.62017483764635,
+              200
+            ],
+            "flags": {
+              "collapsed": true
+            },
+            "order": 3,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "string_b",
+                "name": "string_b",
+                "type": "STRING",
+                "widget": {
+                  "name": "string_b"
+                },
+                "link": 1
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "STRING",
+                "name": "STRING",
+                "type": "STRING",
+                "links": [
+                  2
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "StringConcatenate",
+              "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+              "You are given two inputs:\n1. A SOURCE IMAGE — this is a frame from a video. You must preserve its EXACT composition, subject placement, poses, spatial layout, perspective, and every detail of what is depicted.\n2. A STYLE DESCRIPTION (below) — you must apply this visual treatment to the source image.\n\nSTYLE TO APPLY:\n",
+              "",
+              ""
+            ]
+          },
+          {
+            "id": 13,
+            "type": "ResizeImageMaskNode",
+            "pos": [
+              1335.7016304332992,
+              -1.2077718111014433
+            ],
+            "size": [
+              270,
+              117
+            ],
+            "flags": {
+              "collapsed": true
+            },
+            "order": 7,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "input",
+                "name": "input",
+                "type": "IMAGE,MASK",
+                "link": 11
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "resized",
+                "name": "resized",
+                "type": "IMAGE",
+                "links": [
+                  12
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "ResizeImageMaskNode",
+              "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+              "scale dimensions",
+              1280,
+              720,
+              "disabled",
+              "area"
+            ]
+          }
+        ],
+        "groups": [],
+        "links": [
+          {
+            "id": 9,
+            "origin_id": 3,
+            "origin_slot": 0,
+            "target_id": 10,
+            "target_slot": 0,
+            "type": "IMAGE"
+          },
+          {
+            "id": 12,
+            "origin_id": 13,
+            "origin_slot": 0,
+            "target_id": 8,
+            "target_slot": 0,
+            "type": "IMAGE"
+          },
+          {
+            "id": 6,
+            "origin_id": 1,
+            "origin_slot": 0,
+            "target_id": 8,
+            "target_slot": 1,
+            "type": "STRING"
+          },
+          {
+            "id": 17,
+            "origin_id": 16,
+            "origin_slot": 0,
+            "target_id": 3,
+            "target_slot": 0,
+            "type": "IMAGE"
+          },
+          {
+            "id": 3,
+            "origin_id": 5,
+            "origin_slot": 0,
+            "target_id": 3,
+            "target_slot": 2,
+            "type": "STRING"
+          },
+          {
+            "id": 2,
+            "origin_id": 4,
+            "origin_slot": 0,
+            "target_id": 5,
+            "target_slot": 0,
+            "type": "STRING"
+          },
+          {
+            "id": 1,
+            "origin_id": 2,
+            "origin_slot": 0,
+            "target_id": 4,
+            "target_slot": 0,
+            "type": "STRING"
+          },
+          {
+            "id": 11,
+            "origin_id": 3,
+            "origin_slot": 0,
+            "target_id": 13,
+            "target_slot": 0,
+            "type": "IMAGE"
+          },
+          {
+            "id": 16,
+            "origin_id": -10,
+            "origin_slot": 0,
+            "target_id": 16,
+            "target_slot": 0,
+            "type": "VIDEO"
+          },
+          {
+            "id": 15,
+            "origin_id": -10,
+            "origin_slot": 0,
+            "target_id": 1,
+            "target_slot": 2,
+            "type": "VIDEO"
+          },
+          {
+            "id": 10,
+            "origin_id": -10,
+            "origin_slot": 1,
+            "target_id": 2,
+            "target_slot": 0,
+            "type": "IMAGE"
+          },
+          {
+            "id": 8,
+            "origin_id": 8,
+            "origin_slot": 0,
+            "target_id": -20,
+            "target_slot": 0,
+            "type": "VIDEO"
+          }
+        ],
+        "extra": {
+          "workflowRendererVersion": "LG"
+        }
+      }
+    ]
+  },
+  "config": {},
+  "extra": {
+    "workflowRendererVersion": "LG",
+    "ue_links": [],
+    "links_added_by_ue": [],
+    "ds": {
+      "scale": 0.7972024500000026,
+      "offset": [
+        632.9734592662162,
+        328.7490934750622
+      ]
+    },
+    "frontendVersion": "1.37.11",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}

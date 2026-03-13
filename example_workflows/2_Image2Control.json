@@ -1,0 +1,1175 @@
+{
+  "id": "fb2ad181-0589-49d5-a1e5-519af4e95c51",
+  "revision": 0,
+  "last_node_id": 37,
+  "last_link_id": 52,
+  "nodes": [
+    {
+      "id": 27,
+      "type": "LoadImage",
+      "pos": [
+        -320.1531665774711,
+        700.4303267977173
+      ],
+      "size": [
+        222.798828125,
+        326
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            49
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "title": "Shot Type Reference",
+      "properties": {
+        "Node name for S&R": "LoadImage",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "Screenshot 2025-09-08 015442.png",
+        "image"
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 26,
+      "type": "LoadImage",
+      "pos": [
+        -548.8529139334463,
+        700.9981643016031
+      ],
+      "size": [
+        222.798828125,
+        326
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            48
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "title": "Mood Reference",
+      "properties": {
+        "Node name for S&R": "LoadImage",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "Screenshot 2025-06-11 103045-hi_res2-2.png",
+        "image"
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 28,
+      "type": "LoadImage",
+      "pos": [
+        -94.93051292077962,
+        700.7553097144682
+      ],
+      "size": [
+        222.798828125,
+        326
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            50
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "title": "Movement Reference",
+      "properties": {
+        "Node name for S&R": "LoadImage",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "example_image.jpg",
+        "image"
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 19,
+      "type": "LoadImage",
+      "pos": [
+        -544.5784726778738,
+        339.1936694056495
+      ],
+      "size": [
+        222.798828125,
+        326
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            45
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "title": "Camera/Lens Reference",
+      "properties": {
+        "Node name for S&R": "LoadImage",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "Screenshot 2025-07-01 150541_copy.png",
+        "image"
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 25,
+      "type": "LoadImage",
+      "pos": [
+        -93.19851691937059,
+        338.7431269446735
+      ],
+      "size": [
+        222.798828125,
+        326
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            47
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "title": "Color Grading Reference",
+      "properties": {
+        "Node name for S&R": "LoadImage",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "Reverse_shoot_v02.jpg",
+        "image"
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 24,
+      "type": "LoadImage",
+      "pos": [
+        -316.5186269403269,
+        339.7376584782957
+      ],
+      "size": [
+        222.798828125,
+        326
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            46
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "title": "Lighting Reference",
+      "properties": {
+        "Node name for S&R": "LoadImage",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "KEQq7TbUaNRVzKVAfVy7j_621ca29e9b3f4c728ae555f87cb04f81.jpg",
+        "image"
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 36,
+      "type": "SaveVideo",
+      "pos": [
+        556.7015009935764,
+        303.5933935162251
+      ],
+      "size": [
+        270,
+        106
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 52
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "SaveVideo",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "Sora/Image2Control",
+        "auto",
+        "auto"
+      ]
+    },
+    {
+      "id": 35,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        -547.4019855271769,
+        1069.1951384391846
+      ],
+      "size": [
+        675.7576958573084,
+        140.90906517343387
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            51
+          ]
+        }
+      ],
+      "title": "Prompt",
+      "properties": {
+        "Node name for S&R": "PrimitiveStringMultiline",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "man walking to work"
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 34,
+      "type": "e5eb1e19-2f8b-4e84-9570-147e10af345d",
+      "pos": [
+        256.20737280996616,
+        298.833298927859
+      ],
+      "size": [
+        210,
+        236
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "Camera/Lens",
+          "name": "image_1",
+          "type": "IMAGE",
+          "link": 45
+        },
+        {
+          "label": "Lighting",
+          "name": "image_2",
+          "type": "IMAGE",
+          "link": 46
+        },
+        {
+          "label": "Color Grading",
+          "name": "image_3",
+          "type": "IMAGE",
+          "link": 47
+        },
+        {
+          "label": "Mood",
+          "name": "image_4",
+          "type": "IMAGE",
+          "link": 48
+        },
+        {
+          "label": "Shot Type",
+          "name": "image_5",
+          "type": "IMAGE",
+          "link": 49
+        },
+        {
+          "label": "Movement",
+          "name": "image_6",
+          "type": "IMAGE",
+          "link": 50
+        },
+        {
+          "label": "Prompt",
+          "name": "string_b",
+          "type": "STRING",
+          "widget": {
+            "name": "string_b"
+          },
+          "link": 51
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            52
+          ]
+        }
+      ],
+      "properties": {
+        "proxyWidgets": [
+          [
+            "-1",
+            "string_b"
+          ],
+          [
+            "-1",
+            "duration"
+          ],
+          [
+            "-1",
+            "size"
+          ]
+        ],
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "",
+        8,
+        "1280x720"
+      ]
+    },
+    {
+      "id": 37,
+      "type": "Note",
+      "pos": [
+        250.40227458572076,
+        586.7739091950552
+      ],
+      "size": [
+        221.89796230348634,
+        242.45621981536237
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "In this workflow, add image references for each of your cinematography elements, as well as your prompt. \n\nIf you leave prompt blank it will use the Camera/Lens reference image as the reference for your scene."
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    }
+  ],
+  "links": [
+    [
+      45,
+      19,
+      0,
+      34,
+      0,
+      "IMAGE"
+    ],
+    [
+      46,
+      24,
+      0,
+      34,
+      1,
+      "IMAGE"
+    ],
+    [
+      47,
+      25,
+      0,
+      34,
+      2,
+      "IMAGE"
+    ],
+    [
+      48,
+      26,
+      0,
+      34,
+      3,
+      "IMAGE"
+    ],
+    [
+      49,
+      27,
+      0,
+      34,
+      4,
+      "IMAGE"
+    ],
+    [
+      50,
+      28,
+      0,
+      34,
+      5,
+      "IMAGE"
+    ],
+    [
+      51,
+      35,
+      0,
+      34,
+      6,
+      "STRING"
+    ],
+    [
+      52,
+      34,
+      0,
+      36,
+      0,
+      "VIDEO"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "Input",
+      "bounding": [
+        -558.8529139334463,
+        265.14312694467355,
+        698.4532251390757,
+        954.9610766679449
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "definitions": {
+    "subgraphs": [
+      {
+        "id": "e5eb1e19-2f8b-4e84-9570-147e10af345d",
+        "version": 1,
+        "state": {
+          "lastGroupId": 0,
+          "lastNodeId": 35,
+          "lastLinkId": 49,
+          "lastRerouteId": 0
+        },
+        "revision": 0,
+        "config": {},
+        "name": "Image2Control",
+        "inputNode": {
+          "id": -10,
+          "bounding": [
+            -241.876724171048,
+            682.4918308352806,
+            120,
+            220
+          ]
+        },
+        "outputNode": {
+          "id": -20,
+          "bounding": [
+            1343.9159108598687,
+            742.4918308352806,
+            120,
+            60
+          ]
+        },
+        "inputs": [
+          {
+            "id": "8fe385d1-dd8f-4023-8775-d84b80c27c90",
+            "name": "image_1",
+            "type": "IMAGE",
+            "linkIds": [
+              33
+            ],
+            "localized_name": "image_1",
+            "label": "Camera/Lens",
+            "pos": [
+              -141.876724171048,
+              702.4918308352806
+            ]
+          },
+          {
+            "id": "ef35e2e3-9e4d-4e7d-938b-281ec8bd15d2",
+            "name": "image_2",
+            "type": "IMAGE",
+            "linkIds": [
+              32
+            ],
+            "localized_name": "image_2",
+            "label": "Lighting",
+            "pos": [
+              -141.876724171048,
+              722.4918308352806
+            ]
+          },
+          {
+            "id": "5e8f428d-0dee-47e2-b1dd-65bead73407c",
+            "name": "image_3",
+            "type": "IMAGE",
+            "linkIds": [
+              35
+            ],
+            "label": "Color Grading",
+            "pos": [
+              -141.876724171048,
+              742.4918308352806
+            ]
+          },
+          {
+            "id": "d242168a-32d1-4961-9d69-5523fa466cce",
+            "name": "image_4",
+            "type": "IMAGE",
+            "linkIds": [
+              37
+            ],
+            "label": "Mood",
+            "pos": [
+              -141.876724171048,
+              762.4918308352806
+            ]
+          },
+          {
+            "id": "ab6e9595-3a11-41a9-9250-73afec8adb06",
+            "name": "image_5",
+            "type": "IMAGE",
+            "linkIds": [
+              38
+            ],
+            "label": "Shot Type",
+            "pos": [
+              -141.876724171048,
+              782.4918308352806
+            ]
+          },
+          {
+            "id": "e5910021-8e4f-4b2f-839c-28c941d3c99b",
+            "name": "image_6",
+            "type": "IMAGE",
+            "linkIds": [
+              39
+            ],
+            "label": "Movement",
+            "pos": [
+              -141.876724171048,
+              802.4918308352806
+            ]
+          },
+          {
+            "id": "6d9626e3-4439-4a94-a72e-3af9d59a9efb",
+            "name": "string_b",
+            "type": "STRING",
+            "linkIds": [
+              45
+            ],
+            "label": "Prompt",
+            "pos": [
+              -141.876724171048,
+              822.4918308352806
+            ]
+          },
+          {
+            "id": "5ebebce5-63a6-4795-a418-e0ca4e3e8020",
+            "name": "duration",
+            "type": "COMBO",
+            "linkIds": [
+              47
+            ],
+            "pos": [
+              -141.876724171048,
+              842.4918308352806
+            ]
+          },
+          {
+            "id": "ea32b216-062c-42f7-bf63-6f619040d98f",
+            "name": "size",
+            "type": "COMBO",
+            "linkIds": [
+              48
+            ],
+            "pos": [
+              -141.876724171048,
+              862.4918308352806
+            ]
+          }
+        ],
+        "outputs": [
+          {
+            "id": "feb049bb-35c9-439c-a164-a58b661596c1",
+            "name": "VIDEO",
+            "type": "VIDEO",
+            "linkIds": [
+              49
+            ],
+            "pos": [
+              1363.9159108598687,
+              762.4918308352806
+            ]
+          }
+        ],
+        "widgets": [],
+        "nodes": [
+          {
+            "id": 33,
+            "type": "StringConcatenate",
+            "pos": [
+              74.18772105351243,
+              965.6932907475689
+            ],
+            "size": [
+              400,
+              200
+            ],
+            "flags": {},
+            "order": 4,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "string_a",
+                "name": "string_a",
+                "type": "STRING",
+                "widget": {
+                  "name": "string_a"
+                },
+                "link": 43
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "STRING",
+                "name": "STRING",
+                "type": "STRING",
+                "links": [
+                  44
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "StringConcatenate",
+              "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+              "",
+              "\nWrite a single cohesive, natural-language video prompt optimized for Sora.\n\nRules:\n\nDo NOT mention the image.\n\nDo NOT describe the image separately.\n\nDo NOT explain your reasoning.\n\nDo NOT output analysis.\n\nOutput only the final Sora-ready prompt.\n\nWrite in cinematic, professional film language.\n\nEmphasize physical realism, environmental motion, and spatial coherence.\n\nIntegrate camera movement naturally, even if subtle.\n\nKeep the prompt vivid but efficient (no unnecessary verbosity).\n\nAvoid repetition.\n\nPrioritize:\n\nClear subject and setting\n\nLens and framing feel\n\nLighting behavior\n\nColor and tonal palette\n\nCamera motion\n\nAtmospheric dynamics\n\nReal-world physical detail\n\nReturn only the final prompt.",
+              ""
+            ]
+          },
+          {
+            "id": 32,
+            "type": "StringConcatenate",
+            "pos": [
+              78.89306271028347,
+              700.8421861667889
+            ],
+            "size": [
+              400,
+              200
+            ],
+            "flags": {},
+            "order": 3,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "string_b",
+                "name": "string_b",
+                "type": "STRING",
+                "widget": {
+                  "name": "string_b"
+                },
+                "link": 45
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "STRING",
+                "name": "STRING",
+                "type": "STRING",
+                "links": [
+                  43
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "StringConcatenate",
+              "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+              "Analyze these images and from left to right extract a value from each image:\n\nfirst image: Camera type / lens feel (wide, telephoto, shallow DOF, etc.)\n\nsecond image: Lighting style\n\nthird image: Color grading style\n\nfourth image: Mood\n\nfifth image: Shot type\n\nsixth image: Movement feel (if implied)\n\nCombine those cinematic qualities with this scene description: ",
+              "",
+              ""
+            ]
+          },
+          {
+            "id": 23,
+            "type": "ImageConcatMulti",
+            "pos": [
+              103.05012741825146,
+              398.2256179081349
+            ],
+            "size": [
+              270,
+              230
+            ],
+            "flags": {},
+            "order": 2,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "image_1",
+                "name": "image_1",
+                "type": "IMAGE",
+                "link": 33
+              },
+              {
+                "localized_name": "image_2",
+                "name": "image_2",
+                "type": "IMAGE",
+                "link": 32
+              },
+              {
+                "name": "image_3",
+                "type": "IMAGE",
+                "link": 35
+              },
+              {
+                "name": "image_4",
+                "type": "IMAGE",
+                "link": 37
+              },
+              {
+                "name": "image_5",
+                "type": "IMAGE",
+                "link": 38
+              },
+              {
+                "name": "image_6",
+                "type": "IMAGE",
+                "link": 39
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "images",
+                "name": "images",
+                "type": "IMAGE",
+                "links": [
+                  34
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "ImageConcatMulti",
+              "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+              6,
+              "right",
+              true
+            ]
+          },
+          {
+            "id": 20,
+            "type": "OpenAIChatNode",
+            "pos": [
+              550.4919635842615,
+              422.68191390094836
+            ],
+            "size": [
+              566.4913005815181,
+              312.0877585338352
+            ],
+            "flags": {},
+            "order": 0,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "images",
+                "name": "images",
+                "shape": 7,
+                "type": "IMAGE",
+                "link": 34
+              },
+              {
+                "localized_name": "files",
+                "name": "files",
+                "shape": 7,
+                "type": "OPENAI_INPUT_FILES",
+                "link": null
+              },
+              {
+                "localized_name": "advanced_options",
+                "name": "advanced_options",
+                "shape": 7,
+                "type": "OPENAI_CHAT_CONFIG",
+                "link": null
+              },
+              {
+                "localized_name": "prompt",
+                "name": "prompt",
+                "type": "STRING",
+                "widget": {
+                  "name": "prompt"
+                },
+                "link": 44
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "STRING",
+                "name": "STRING",
+                "type": "STRING",
+                "links": [
+                  29,
+                  46
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "OpenAIChatNode",
+              "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+              "Analyze these images and from left to right extract a value from each image:\n\nfirst image: Camera type / lens feel (wide, telephoto, shallow DOF, etc.)\n\nsecond image: Lighting style\n\nthird image: Color grading style\n\nfourth image: Mood\n\nfifth image: Shot type\n\nsixth image: Movement feel (if implied)\nReturn structured JSON of just these values.",
+              false,
+              "gpt-5"
+            ],
+            "color": "#432",
+            "bgcolor": "#653"
+          },
+          {
+            "id": 34,
+            "type": "OpenAIVideoSora2",
+            "pos": [
+              1326.2076776135086,
+              419.07912752421515
+            ],
+            "size": [
+              400,
+              208
+            ],
+            "flags": {},
+            "order": 5,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "image",
+                "name": "image",
+                "shape": 7,
+                "type": "IMAGE",
+                "link": null
+              },
+              {
+                "localized_name": "prompt",
+                "name": "prompt",
+                "type": "STRING",
+                "widget": {
+                  "name": "prompt"
+                },
+                "link": 46
+              },
+              {
+                "localized_name": "size",
+                "name": "size",
+                "type": "COMBO",
+                "widget": {
+                  "name": "size"
+                },
+                "link": 48
+              },
+              {
+                "localized_name": "duration",
+                "name": "duration",
+                "type": "COMBO",
+                "widget": {
+                  "name": "duration"
+                },
+                "link": 47
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "VIDEO",
+                "name": "VIDEO",
+                "type": "VIDEO",
+                "links": [
+                  49
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "OpenAIVideoSora2",
+              "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+              "sora-2",
+              "",
+              "1280x720",
+              8,
+              294960391,
+              "randomize"
+            ],
+            "color": "#432",
+            "bgcolor": "#653"
+          },
+          {
+            "id": 21,
+            "type": "easy showAnything",
+            "pos": [
+              562.3367101984016,
+              780.3446977584944
+            ],
+            "size": [
+              559.1737790524396,
+              460.2904305264899
+            ],
+            "flags": {},
+            "order": 1,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "anything",
+                "name": "anything",
+                "shape": 7,
+                "type": "*",
+                "link": 29
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "output",
+                "name": "output",
+                "type": "*",
+                "links": null
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "easy showAnything",
+              "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+              "Extreme wide establishing telephoto shot (85–135mm look) of a solitary man walking to work along a city block at early morning. Long‑lens compression with shallow depth isolates him against storefronts while foreground poles and passing cars smear into soft bokeh. Lighting: natural dawn paired with glowing practical shop windows and lingering string lights, a gentle backlight edging his coat and soft bounce from pale walls; highlights halate realistically. Color grade: high‑contrast black‑and‑white with fine film grain, deep blacks and silvery midtones. Mood: quiet, introspective, restrained. The camera glides in a smooth lateral track that parallels his pace with occasional subtle dolly drift; rich parallax from fences, signposts, and pedestrians keeps space coherent. Wind lifts his collar, breath and street steam drift, paper skitters, and distant buses rumble—grounded, physical realism."
+            ]
+          }
+        ],
+        "groups": [],
+        "links": [
+          {
+            "id": 43,
+            "origin_id": 32,
+            "origin_slot": 0,
+            "target_id": 33,
+            "target_slot": 0,
+            "type": "STRING"
+          },
+          {
+            "id": 34,
+            "origin_id": 23,
+            "origin_slot": 0,
+            "target_id": 20,
+            "target_slot": 0,
+            "type": "IMAGE"
+          },
+          {
+            "id": 44,
+            "origin_id": 33,
+            "origin_slot": 0,
+            "target_id": 20,
+            "target_slot": 3,
+            "type": "STRING"
+          },
+          {
+            "id": 29,
+            "origin_id": 20,
+            "origin_slot": 0,
+            "target_id": 21,
+            "target_slot": 0,
+            "type": "STRING"
+          },
+          {
+            "id": 33,
+            "origin_id": -10,
+            "origin_slot": 0,
+            "target_id": 23,
+            "target_slot": 0,
+            "type": "IMAGE"
+          },
+          {
+            "id": 32,
+            "origin_id": -10,
+            "origin_slot": 1,
+            "target_id": 23,
+            "target_slot": 1,
+            "type": "IMAGE"
+          },
+          {
+            "id": 35,
+            "origin_id": -10,
+            "origin_slot": 2,
+            "target_id": 23,
+            "target_slot": 2,
+            "type": "IMAGE"
+          },
+          {
+            "id": 37,
+            "origin_id": -10,
+            "origin_slot": 3,
+            "target_id": 23,
+            "target_slot": 3,
+            "type": "IMAGE"
+          },
+          {
+            "id": 38,
+            "origin_id": -10,
+            "origin_slot": 4,
+            "target_id": 23,
+            "target_slot": 4,
+            "type": "IMAGE"
+          },
+          {
+            "id": 39,
+            "origin_id": -10,
+            "origin_slot": 5,
+            "target_id": 23,
+            "target_slot": 5,
+            "type": "IMAGE"
+          },
+          {
+            "id": 45,
+            "origin_id": -10,
+            "origin_slot": 6,
+            "target_id": 32,
+            "target_slot": 0,
+            "type": "STRING"
+          },
+          {
+            "id": 46,
+            "origin_id": 20,
+            "origin_slot": 0,
+            "target_id": 34,
+            "target_slot": 1,
+            "type": "STRING"
+          },
+          {
+            "id": 47,
+            "origin_id": -10,
+            "origin_slot": 7,
+            "target_id": 34,
+            "target_slot": 3,
+            "type": "COMBO"
+          },
+          {
+            "id": 48,
+            "origin_id": -10,
+            "origin_slot": 8,
+            "target_id": 34,
+            "target_slot": 2,
+            "type": "COMBO"
+          },
+          {
+            "id": 49,
+            "origin_id": 34,
+            "origin_slot": 0,
+            "target_id": -20,
+            "target_slot": 0,
+            "type": "VIDEO"
+          }
+        ],
+        "extra": {
+          "workflowRendererVersion": "LG"
+        }
+      }
+    ]
+  },
+  "config": {},
+  "extra": {
+    "workflowRendererVersion": "LG",
+    "ue_links": [],
+    "links_added_by_ue": [],
+    "ds": {
+      "scale": 0.9646149645000006,
+      "offset": [
+        1353.3464302686282,
+        -120.26652898532234
+      ]
+    },
+    "frontendVersion": "1.37.11",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}

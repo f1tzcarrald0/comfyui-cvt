@@ -1,0 +1,1587 @@
+{
+  "id": "97ab865e-f6c1-42b0-8fd0-5526c9ce07b0",
+  "revision": 0,
+  "last_node_id": 28,
+  "last_link_id": 44,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "LoadImage",
+      "pos": [
+        1170.8834578257454,
+        732.7408665345791
+      ],
+      "size": [
+        282.798828125,
+        314
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            15
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "premium_photo-1672847671576-21241c8e28f2.avif",
+        "image"
+      ]
+    },
+    {
+      "id": 14,
+      "type": "LoadImage",
+      "pos": [
+        1484.4625395884761,
+        732.7233204896562
+      ],
+      "size": [
+        282.798828125,
+        314
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            19
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "title": "Lighting Reference",
+      "properties": {
+        "Node name for S&R": "LoadImage",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "premium_photo-1672847671576-21241c8e28f2.avif",
+        "image"
+      ]
+    },
+    {
+      "id": 3,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        1482.0049448372201,
+        1112.9849542677666
+      ],
+      "size": [
+        280.04540230206953,
+        207.47448491402702
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            16
+          ]
+        }
+      ],
+      "title": "Production Design Prompt",
+      "properties": {
+        "Node name for S&R": "PrimitiveStringMultiline",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "a magical book"
+      ]
+    },
+    {
+      "id": 15,
+      "type": "LoadImage",
+      "pos": [
+        1167.8414742268253,
+        1109.169346293044
+      ],
+      "size": [
+        282.798828125,
+        314
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            20
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "title": "Prod. Design Image",
+      "properties": {
+        "Node name for S&R": "LoadImage",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "5mhDOetEvt16fEHTaHlKW_d2a9b21714db42cba8861858479ad14f.jpg",
+        "image"
+      ]
+    },
+    {
+      "id": 23,
+      "type": "LoadImage",
+      "pos": [
+        1165.1460602878128,
+        1489.0100474001242
+      ],
+      "size": [
+        282.798828125,
+        314
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            36
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "title": "Prod. Design Image",
+      "properties": {
+        "Node name for S&R": "LoadImage",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "5mhDOetEvt16fEHTaHlKW_d2a9b21714db42cba8861858479ad14f.jpg",
+        "image"
+      ]
+    },
+    {
+      "id": 27,
+      "type": "SaveImage",
+      "pos": [
+        2354.341756928851,
+        928.7102896842974
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 41
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "T2IProdDesign_Relight"
+      ]
+    },
+    {
+      "id": 26,
+      "type": "SaveImage",
+      "pos": [
+        2357.984532413319,
+        779.3580465350053
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 40
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "T2IProdDesign"
+      ]
+    },
+    {
+      "id": 25,
+      "type": "SaveVideo",
+      "pos": [
+        2343.413615754715,
+        1087.7765621923177
+      ],
+      "size": [
+        270,
+        106
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 39
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "SaveVideo"
+      },
+      "widgets_values": [
+        "Sora/T2IProdDesign",
+        "auto",
+        "auto"
+      ]
+    },
+    {
+      "id": 13,
+      "type": "a0d97e85-8c26-44ef-9b19-9ca9c778010d",
+      "pos": [
+        1852.1054003368438,
+        906.2419688622837
+      ],
+      "size": [
+        382.28022343751763,
+        208
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 15
+        },
+        {
+          "label": "Prompt",
+          "name": "string_b",
+          "type": "STRING",
+          "widget": {
+            "name": "string_b"
+          },
+          "link": 16
+        },
+        {
+          "label": "Lighting Reference",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 19
+        },
+        {
+          "label": "Prod_design",
+          "name": "images_1",
+          "type": "IMAGE",
+          "link": 20
+        },
+        {
+          "label": "Wardrobe_ref",
+          "name": "images_2",
+          "type": "IMAGE",
+          "link": 36
+        }
+      ],
+      "outputs": [
+        {
+          "label": "Prod_design",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            40
+          ]
+        },
+        {
+          "label": "Relight",
+          "name": "IMAGE_1",
+          "type": "IMAGE",
+          "links": [
+            41
+          ]
+        },
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            39
+          ]
+        }
+      ],
+      "properties": {
+        "proxyWidgets": [
+          [
+            "-1",
+            "string_b"
+          ],
+          [
+            "4",
+            "seed"
+          ],
+          [
+            "9",
+            "seed"
+          ],
+          [
+            "28",
+            "camera_move"
+          ]
+        ],
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        ""
+      ]
+    }
+  ],
+  "links": [
+    [
+      15,
+      1,
+      0,
+      13,
+      0,
+      "IMAGE"
+    ],
+    [
+      16,
+      3,
+      0,
+      13,
+      1,
+      "STRING"
+    ],
+    [
+      19,
+      14,
+      0,
+      13,
+      2,
+      "IMAGE"
+    ],
+    [
+      20,
+      15,
+      0,
+      13,
+      3,
+      "IMAGE"
+    ],
+    [
+      36,
+      23,
+      0,
+      13,
+      4,
+      "IMAGE"
+    ],
+    [
+      39,
+      13,
+      2,
+      25,
+      0,
+      "VIDEO"
+    ],
+    [
+      40,
+      13,
+      0,
+      26,
+      0,
+      "IMAGE"
+    ],
+    [
+      41,
+      13,
+      1,
+      27,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [],
+  "definitions": {
+    "subgraphs": [
+      {
+        "id": "a0d97e85-8c26-44ef-9b19-9ca9c778010d",
+        "version": 1,
+        "state": {
+          "lastGroupId": 0,
+          "lastNodeId": 28,
+          "lastLinkId": 44,
+          "lastRerouteId": 0
+        },
+        "revision": 0,
+        "config": {},
+        "name": "T2i Prod Design",
+        "inputNode": {
+          "id": -10,
+          "bounding": [
+            347.6345517891541,
+            1314.1719715234617,
+            146.6875,
+            140
+          ]
+        },
+        "outputNode": {
+          "id": -20,
+          "bounding": [
+            2362.7863031812885,
+            1314.1719715234617,
+            120,
+            100
+          ]
+        },
+        "inputs": [
+          {
+            "id": "f802dcf9-14bd-4927-96c5-2354c4e305b2",
+            "name": "image",
+            "type": "IMAGE",
+            "linkIds": [
+              3
+            ],
+            "localized_name": "image",
+            "shape": 7,
+            "pos": [
+              474.3220517891541,
+              1334.1719715234617
+            ]
+          },
+          {
+            "id": "711e8243-3dc9-48bd-be0d-5c2d3406de8f",
+            "name": "string_b",
+            "type": "STRING",
+            "linkIds": [
+              21
+            ],
+            "localized_name": "string_b",
+            "label": "Prompt",
+            "pos": [
+              474.3220517891541,
+              1354.1719715234617
+            ]
+          },
+          {
+            "id": "e993ffa9-a22f-4aa1-ada5-f08e0d50f64e",
+            "name": "images",
+            "type": "IMAGE",
+            "linkIds": [
+              15
+            ],
+            "label": "Lighting Reference",
+            "pos": [
+              474.3220517891541,
+              1374.1719715234617
+            ]
+          },
+          {
+            "id": "366b438d-7807-476a-8741-91c60acafa9b",
+            "name": "images_1",
+            "type": "IMAGE",
+            "linkIds": [
+              19
+            ],
+            "label": "Prod_design",
+            "pos": [
+              474.3220517891541,
+              1394.1719715234617
+            ]
+          },
+          {
+            "id": "a7dd7705-3093-4be1-9bb2-d511e430d342",
+            "name": "images_2",
+            "type": "IMAGE",
+            "linkIds": [
+              35
+            ],
+            "label": "Wardrobe_ref",
+            "pos": [
+              474.3220517891541,
+              1414.1719715234617
+            ]
+          }
+        ],
+        "outputs": [
+          {
+            "id": "10afbf4f-ae9e-4f7c-8be1-e49a8b09a0d3",
+            "name": "IMAGE",
+            "type": "IMAGE",
+            "linkIds": [
+              33
+            ],
+            "localized_name": "IMAGE",
+            "label": "Prod_design",
+            "pos": [
+              2382.7863031812885,
+              1334.1719715234617
+            ]
+          },
+          {
+            "id": "44fcf534-11ae-45e2-886d-8637097dde38",
+            "name": "IMAGE_1",
+            "type": "IMAGE",
+            "linkIds": [
+              10
+            ],
+            "localized_name": "IMAGE_1",
+            "label": "Relight",
+            "pos": [
+              2382.7863031812885,
+              1354.1719715234617
+            ]
+          },
+          {
+            "id": "0cf78273-de51-4a82-bcdb-86c79324fac0",
+            "name": "VIDEO",
+            "type": "VIDEO",
+            "linkIds": [
+              38
+            ],
+            "pos": [
+              2382.7863031812885,
+              1374.1719715234617
+            ]
+          }
+        ],
+        "widgets": [],
+        "nodes": [
+          {
+            "id": 10,
+            "type": "StringConcatenate",
+            "pos": [
+              1678.9858359815569,
+              1525.5119597581358
+            ],
+            "size": [
+              400,
+              200
+            ],
+            "flags": {
+              "collapsed": true
+            },
+            "order": 8,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "string_a",
+                "name": "string_a",
+                "type": "STRING",
+                "widget": {
+                  "name": "string_a"
+                },
+                "link": 11
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "STRING",
+                "name": "STRING",
+                "type": "STRING",
+                "links": [
+                  12
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "StringConcatenate",
+              "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+              "Relight the base image with the following lighting characteristics:\n",
+              "\nTreat the transformation as a non-destructive lighting grade applied to a locked camera plate.\nThe base image must remain compositionally and structurally identical. Any deviation from object placement, perspective, or geometry is considered a failure.",
+              ""
+            ]
+          },
+          {
+            "id": 8,
+            "type": "StringConcatenate",
+            "pos": [
+              1679.3063333756847,
+              1468.600697743612
+            ],
+            "size": [
+              400,
+              200
+            ],
+            "flags": {
+              "collapsed": true
+            },
+            "order": 6,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "string_b",
+                "name": "string_b",
+                "type": "STRING",
+                "widget": {
+                  "name": "string_b"
+                },
+                "link": 7
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "STRING",
+                "name": "STRING",
+                "type": "STRING",
+                "links": [
+                  11
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "StringConcatenate",
+              "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+              "Relight the base image with the following lighting characteristics:\n",
+              "",
+              ""
+            ]
+          },
+          {
+            "id": 17,
+            "type": "OpenAIChatConfig",
+            "pos": [
+              1090.2117305521838,
+              1797.7482798714702
+            ],
+            "size": [
+              400,
+              200
+            ],
+            "flags": {
+              "collapsed": true
+            },
+            "order": 0,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+              {
+                "localized_name": "OPENAI_CHAT_CONFIG",
+                "name": "OPENAI_CHAT_CONFIG",
+                "type": "OPENAI_CHAT_CONFIG",
+                "links": [
+                  24
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "OpenAIChatConfig",
+              "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+              "auto",
+              2400,
+              "You are a professional cinematographer and gaffer analyzing a lighting reference image.\n\nYou will receive a single image.\n\nYour task is to extract only the lighting characteristics of the image in clear, professional cinematic language.\n\nAnalyze and describe:\n\nPrimary light direction (angle, height, lateral position)\n\nLight source motivation (window light, overhead practicals, sunlight, neon, etc.)\n\nLight quality (hard, soft, diffused, specular, bounced)\n\nContrast ratio (low-key, high-key, high contrast, soft contrast)\n\nShadow behavior (deep shadows, lifted shadows, sharp edges, soft falloff)\n\nColor temperature relationships (warm key / cool fill, monochromatic, mixed lighting, etc.)\n\nPresence of volumetrics (haze, beams, dust interaction)\n\nAmbient fill level\n\nEdge lighting or rim lighting\n\nHighlight rolloff or bloom\n\nOverall lighting mood\n\nImportant rules:\n\nDescribe only lighting.\n\nDo NOT describe objects, people, or set design.\n\nDo NOT describe composition or lensing.\n\nDo NOT mention the image.\n\nDo NOT output analysis steps.\n\nDo NOT output JSON or bullet points.\n\nWrite in concise but detailed natural cinematic language.\n\nWrite as if providing instructions to a gaffer preparing a lighting setup.\n\nReturn only the lighting description. Write the output so it can be directly appended to a relighting instruction."
+            ]
+          },
+          {
+            "id": 7,
+            "type": "OpenAIChatNode",
+            "pos": [
+              1209.9922486381959,
+              1326.2546882347658
+            ],
+            "size": [
+              400,
+              222
+            ],
+            "flags": {
+              "collapsed": false
+            },
+            "order": 5,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "images",
+                "name": "images",
+                "shape": 7,
+                "type": "IMAGE",
+                "link": 15
+              },
+              {
+                "localized_name": "files",
+                "name": "files",
+                "shape": 7,
+                "type": "OPENAI_INPUT_FILES",
+                "link": null
+              },
+              {
+                "localized_name": "advanced_options",
+                "name": "advanced_options",
+                "shape": 7,
+                "type": "OPENAI_CHAT_CONFIG",
+                "link": 24
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "STRING",
+                "name": "STRING",
+                "type": "STRING",
+                "links": [
+                  7
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "OpenAIChatNode",
+              "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+              "",
+              false,
+              "gpt-5"
+            ],
+            "color": "#432",
+            "bgcolor": "#653"
+          },
+          {
+            "id": 13,
+            "type": "OpenAIChatNode",
+            "pos": [
+              592.2591110115635,
+              1911.236739489474
+            ],
+            "size": [
+              425.1042462438461,
+              373.1549292203754
+            ],
+            "flags": {},
+            "order": 9,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "images",
+                "name": "images",
+                "shape": 7,
+                "type": "IMAGE",
+                "link": 19
+              },
+              {
+                "localized_name": "files",
+                "name": "files",
+                "shape": 7,
+                "type": "OPENAI_INPUT_FILES",
+                "link": null
+              },
+              {
+                "localized_name": "advanced_options",
+                "name": "advanced_options",
+                "shape": 7,
+                "type": "OPENAI_CHAT_CONFIG",
+                "link": 22
+              },
+              {
+                "localized_name": "prompt",
+                "name": "prompt",
+                "type": "STRING",
+                "widget": {
+                  "name": "prompt"
+                },
+                "link": 21
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "STRING",
+                "name": "STRING",
+                "type": "STRING",
+                "links": [
+                  16
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "OpenAIChatNode",
+              "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+              "",
+              false,
+              "gpt-5"
+            ],
+            "color": "#432",
+            "bgcolor": "#653"
+          },
+          {
+            "id": 14,
+            "type": "OpenAIChatConfig",
+            "pos": [
+              78.90400169167746,
+              1908.117929549837
+            ],
+            "size": [
+              436.8663756028511,
+              342.7840578904079
+            ],
+            "flags": {
+              "collapsed": false
+            },
+            "order": 1,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+              {
+                "localized_name": "OPENAI_CHAT_CONFIG",
+                "name": "OPENAI_CHAT_CONFIG",
+                "type": "OPENAI_CHAT_CONFIG",
+                "links": [
+                  22
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "OpenAIChatConfig",
+              "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+              "auto",
+              2400,
+              "You are a professional production designer and prop fabrication supervisor.\n\nYou will receive:\n\nAn input image of an environment (for lighting and realism context only).\n\nand/or \n\nA short description of a production design element or object.\n\nYour task:\nGenerate a highly detailed, physically plausible description of the requested object or production design element.\n\nCRITICAL RULES:\n\nDo NOT describe the room, architecture, walls, ceiling, floor, windows, or layout.\n\nDo NOT describe placement within the scene.\n\nDo NOT mention camera, framing, or composition.\n\nDo NOT describe lighting in the environment — only how the object physically interacts with light on its surface.\n\nDo NOT introduce narrative or emotional language.\n\nThe output must:\n\nDescribe only the object itself.\n\nSpecify materials, construction methods, finishes, scale, and surface qualities.\n\nInclude texture, wear, fabrication detail, and material realism.\n\nInclude subtle physical properties (weight, density, reflectivity, translucency, patina, edge softness, etc.).\n\nMaintain realistic proportions and manufacturing plausibility.\n\nBe production-ready, as if handed to an art department for fabrication.\n\nAvoid metaphor.\nAvoid mood descriptions.\nAvoid storytelling.\n\nOutput format:\nWrite one cohesive, highly detailed paragraph describing only the object.\n\nDo not repeat instructions.\nDo not reference the scene."
+            ]
+          },
+          {
+            "id": 5,
+            "type": "StringConcatenate",
+            "pos": [
+              -3.9157519564708427,
+              1450.6236503140233
+            ],
+            "size": [
+              435.1108339074773,
+              415.93162853098534
+            ],
+            "flags": {},
+            "order": 4,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "string_b",
+                "name": "string_b",
+                "type": "STRING",
+                "widget": {
+                  "name": "string_b"
+                },
+                "link": 16
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "STRING",
+                "name": "STRING",
+                "type": "STRING",
+                "links": [
+                  30
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "StringConcatenate",
+              "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+              "Maintain identical camera position, lens perspective, and architectural structure. Do not alter walls, ceiling height, floor layout, or framing. Only modify set dressing and production design elements.\n\nPreserve the existing lighting conditions from the source image. Focus only on adding physical objects, materials, and environmental details. Identify what the production design element is and make sure it is proportional to the environment.\n\nAdd this production design to the scene:\n",
+              "",
+              "  "
+            ]
+          },
+          {
+            "id": 4,
+            "type": "OpenAIGPTImage1",
+            "pos": [
+              567.5913144080375,
+              961.410013014198
+            ],
+            "size": [
+              400,
+              322
+            ],
+            "flags": {},
+            "order": 3,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "image",
+                "name": "image",
+                "shape": 7,
+                "type": "IMAGE",
+                "link": 3
+              },
+              {
+                "localized_name": "mask",
+                "name": "mask",
+                "shape": 7,
+                "type": "MASK",
+                "link": null
+              },
+              {
+                "localized_name": "prompt",
+                "name": "prompt",
+                "type": "STRING",
+                "widget": {
+                  "name": "prompt"
+                },
+                "link": 30
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "IMAGE",
+                "name": "IMAGE",
+                "type": "IMAGE",
+                "links": [
+                  31
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "OpenAIGPTImage1",
+              "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+              "",
+              162198342,
+              "randomize",
+              "high",
+              "auto",
+              "auto",
+              1,
+              "gpt-image-1.5"
+            ],
+            "color": "#432",
+            "bgcolor": "#653"
+          },
+          {
+            "id": 22,
+            "type": "OpenAIGPTImage1",
+            "pos": [
+              1063.79973580888,
+              950.2005315421528
+            ],
+            "size": [
+              400,
+              322
+            ],
+            "flags": {},
+            "order": 12,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "image",
+                "name": "image",
+                "shape": 7,
+                "type": "IMAGE",
+                "link": 31
+              },
+              {
+                "localized_name": "mask",
+                "name": "mask",
+                "shape": 7,
+                "type": "MASK",
+                "link": null
+              },
+              {
+                "localized_name": "prompt",
+                "name": "prompt",
+                "type": "STRING",
+                "widget": {
+                  "name": "prompt"
+                },
+                "link": 34
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "IMAGE",
+                "name": "IMAGE",
+                "type": "IMAGE",
+                "links": [
+                  32,
+                  33
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "OpenAIGPTImage1",
+              "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+              "",
+              162198342,
+              "randomize",
+              "high",
+              "auto",
+              "auto",
+              1,
+              "gpt-image-1.5"
+            ],
+            "color": "#432",
+            "bgcolor": "#653"
+          },
+          {
+            "id": 21,
+            "type": "OpenAIChatConfig",
+            "pos": [
+              110.06473518213974,
+              2359.829957406144
+            ],
+            "size": [
+              436.8663756028511,
+              342.7840578904079
+            ],
+            "flags": {
+              "collapsed": false
+            },
+            "order": 2,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+              {
+                "localized_name": "OPENAI_CHAT_CONFIG",
+                "name": "OPENAI_CHAT_CONFIG",
+                "type": "OPENAI_CHAT_CONFIG",
+                "links": [
+                  28
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "OpenAIChatConfig",
+              "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+              "auto",
+              2400,
+              "You are a professional film costume designer and wardrobe supervisor.\n\nYou will receive an image of a character.\n\nYour task is to analyze the wardrobe and produce a clear, detailed description of the clothing the character is wearing.\n\nIMPORTANT RULES:\n\nDescribe only the clothing and wearable accessories.\n\nDo NOT describe the character’s face, body, identity, gender, age, ethnicity, or expression.\n\nDo NOT describe pose, camera angle, environment, or background.\n\nDo NOT describe mood or storytelling.\n\nFocus only on wardrobe elements such as:\n\nshirts, jackets, coats\n\npants, skirts, dresses\n\nshoes or boots\n\nhats or headwear\n\nbelts, gloves, scarves\n\nvisible jewelry or wearable accessories\n\nFor each clothing item include:\n\ngarment type\n\nmaterials and fabric\n\ncolor and pattern\n\ncut, silhouette, and fit\n\nvisible construction details (seams, stitching, buttons, zippers, pockets, collars)\n\nsurface finish and texture\n\nlayering relationships between garments\n\nThe description should be physically grounded and production-ready, as if written for a film wardrobe department.\n\nAvoid metaphor, narrative, or emotional language.\n\nOutput format:\nWrite one cohesive paragraph describing the full wardrobe outfit.\nThe output should be ready to append directly after the phrase:\n\n\"Add this clothing to the character:\"\n\nDo not include any extra commentary or explanation."
+            ]
+          },
+          {
+            "id": 19,
+            "type": "StringConcatenate",
+            "pos": [
+              621.9278691582972,
+              1383.817049874273
+            ],
+            "size": [
+              435.1108339074773,
+              415.93162853098534
+            ],
+            "flags": {},
+            "order": 10,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "string_b",
+                "name": "string_b",
+                "type": "STRING",
+                "widget": {
+                  "name": "string_b"
+                },
+                "link": 29
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "STRING",
+                "name": "STRING",
+                "type": "STRING",
+                "links": [
+                  34
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "StringConcatenate",
+              "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+              "If a human character is visible in the image, modify their clothing and wardrobe.\n\nPreserve the character's identity, face, hairstyle, body proportions, pose, gesture, and position exactly as they appear in the source image. Do not change facial features, expression, age, ethnicity, or body shape.\n\nDo not move the character or alter the camera framing. The character must remain in the exact same location and pose.\n\nApply the clothing naturally to the character’s body so that it fits their posture and anatomy realistically. Fabric should follow gravity, folds, tension points, and contact areas with the body.\n\nMatch the lighting, shadows, reflections, and color temperature already present in the scene so the clothing integrates naturally.\n\nThe clothing must be physically plausible, correctly scaled, and layered appropriately (e.g., shirts under jackets, belts over pants, etc.). Maintain realistic fabric behavior, stitching, seams, and material properties.\n\nIf no character is visible, do nothing and leave the image unchanged.\n\nAdd this clothing to the character:\n",
+              "",
+              "  "
+            ]
+          },
+          {
+            "id": 20,
+            "type": "OpenAIChatNode",
+            "pos": [
+              626.7314585788123,
+              2337.5599506713365
+            ],
+            "size": [
+              425.1042462438461,
+              373.1549292203754
+            ],
+            "flags": {},
+            "order": 11,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "images",
+                "name": "images",
+                "shape": 7,
+                "type": "IMAGE",
+                "link": 35
+              },
+              {
+                "localized_name": "files",
+                "name": "files",
+                "shape": 7,
+                "type": "OPENAI_INPUT_FILES",
+                "link": null
+              },
+              {
+                "localized_name": "advanced_options",
+                "name": "advanced_options",
+                "shape": 7,
+                "type": "OPENAI_CHAT_CONFIG",
+                "link": 28
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "STRING",
+                "name": "STRING",
+                "type": "STRING",
+                "links": [
+                  29
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "OpenAIChatNode",
+              "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+              "",
+              false,
+              "gpt-5"
+            ],
+            "color": "#432",
+            "bgcolor": "#653"
+          },
+          {
+            "id": 24,
+            "type": "OpenAIVideoSora2",
+            "pos": [
+              1885.0719419388904,
+              1655.567013472462
+            ],
+            "size": [
+              400,
+              208
+            ],
+            "flags": {},
+            "order": 13,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "image",
+                "name": "image",
+                "shape": 7,
+                "type": "IMAGE",
+                "link": 37
+              },
+              {
+                "localized_name": "prompt",
+                "name": "prompt",
+                "type": "STRING",
+                "widget": {
+                  "name": "prompt"
+                },
+                "link": 44
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "VIDEO",
+                "name": "VIDEO",
+                "type": "VIDEO",
+                "links": [
+                  38
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "OpenAIVideoSora2"
+            },
+            "widgets_values": [
+              "sora-2",
+              "",
+              "1280x720",
+              8,
+              0,
+              "randomize"
+            ],
+            "color": "#432",
+            "bgcolor": "#653"
+          },
+          {
+            "id": 9,
+            "type": "OpenAIGPTImage1",
+            "pos": [
+              1902.7863031812888,
+              980.4720250165497
+            ],
+            "size": [
+              400,
+              322.0000000000001
+            ],
+            "flags": {},
+            "order": 7,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "image",
+                "name": "image",
+                "shape": 7,
+                "type": "IMAGE",
+                "link": 32
+              },
+              {
+                "localized_name": "mask",
+                "name": "mask",
+                "shape": 7,
+                "type": "MASK",
+                "link": null
+              },
+              {
+                "localized_name": "prompt",
+                "name": "prompt",
+                "type": "STRING",
+                "widget": {
+                  "name": "prompt"
+                },
+                "link": 12
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "IMAGE",
+                "name": "IMAGE",
+                "type": "IMAGE",
+                "links": [
+                  10,
+                  37,
+                  42
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "OpenAIGPTImage1",
+              "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+              "",
+              454524854,
+              "randomize",
+              "high",
+              "auto",
+              "auto",
+              1,
+              "gpt-image-1.5"
+            ],
+            "color": "#432",
+            "bgcolor": "#653"
+          },
+          {
+            "id": 28,
+            "type": "SceneCamera",
+            "pos": [
+              1549.2964345097423,
+              1733.7554731439636
+            ],
+            "size": [
+              270,
+              106
+            ],
+            "flags": {},
+            "order": 14,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "image",
+                "name": "image",
+                "type": "IMAGE",
+                "link": 42
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "video_prompt",
+                "name": "video_prompt",
+                "type": "STRING",
+                "links": [
+                  44
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "SceneCamera"
+            },
+            "widgets_values": [
+              "slow push in"
+            ]
+          }
+        ],
+        "groups": [],
+        "links": [
+          {
+            "id": 7,
+            "origin_id": 7,
+            "origin_slot": 0,
+            "target_id": 8,
+            "target_slot": 0,
+            "type": "STRING"
+          },
+          {
+            "id": 11,
+            "origin_id": 8,
+            "origin_slot": 0,
+            "target_id": 10,
+            "target_slot": 0,
+            "type": "STRING"
+          },
+          {
+            "id": 12,
+            "origin_id": 10,
+            "origin_slot": 0,
+            "target_id": 9,
+            "target_slot": 2,
+            "type": "STRING"
+          },
+          {
+            "id": 3,
+            "origin_id": -10,
+            "origin_slot": 0,
+            "target_id": 4,
+            "target_slot": 0,
+            "type": "IMAGE"
+          },
+          {
+            "id": 10,
+            "origin_id": 9,
+            "origin_slot": 0,
+            "target_id": -20,
+            "target_slot": 1,
+            "type": "IMAGE"
+          },
+          {
+            "id": 15,
+            "origin_id": -10,
+            "origin_slot": 2,
+            "target_id": 7,
+            "target_slot": 0,
+            "type": "IMAGE"
+          },
+          {
+            "id": 16,
+            "origin_id": 13,
+            "origin_slot": 0,
+            "target_id": 5,
+            "target_slot": 0,
+            "type": "STRING"
+          },
+          {
+            "id": 19,
+            "origin_id": -10,
+            "origin_slot": 3,
+            "target_id": 13,
+            "target_slot": 0,
+            "type": "IMAGE"
+          },
+          {
+            "id": 21,
+            "origin_id": -10,
+            "origin_slot": 1,
+            "target_id": 13,
+            "target_slot": 3,
+            "type": "STRING"
+          },
+          {
+            "id": 22,
+            "origin_id": 14,
+            "origin_slot": 0,
+            "target_id": 13,
+            "target_slot": 2,
+            "type": "OPENAI_CHAT_CONFIG"
+          },
+          {
+            "id": 24,
+            "origin_id": 17,
+            "origin_slot": 0,
+            "target_id": 7,
+            "target_slot": 2,
+            "type": "OPENAI_CHAT_CONFIG"
+          },
+          {
+            "id": 28,
+            "origin_id": 21,
+            "origin_slot": 0,
+            "target_id": 20,
+            "target_slot": 2,
+            "type": "OPENAI_CHAT_CONFIG"
+          },
+          {
+            "id": 29,
+            "origin_id": 20,
+            "origin_slot": 0,
+            "target_id": 19,
+            "target_slot": 0,
+            "type": "STRING"
+          },
+          {
+            "id": 30,
+            "origin_id": 5,
+            "origin_slot": 0,
+            "target_id": 4,
+            "target_slot": 2,
+            "type": "STRING"
+          },
+          {
+            "id": 31,
+            "origin_id": 4,
+            "origin_slot": 0,
+            "target_id": 22,
+            "target_slot": 0,
+            "type": "IMAGE"
+          },
+          {
+            "id": 32,
+            "origin_id": 22,
+            "origin_slot": 0,
+            "target_id": 9,
+            "target_slot": 0,
+            "type": "IMAGE"
+          },
+          {
+            "id": 33,
+            "origin_id": 22,
+            "origin_slot": 0,
+            "target_id": -20,
+            "target_slot": 0,
+            "type": "IMAGE"
+          },
+          {
+            "id": 34,
+            "origin_id": 19,
+            "origin_slot": 0,
+            "target_id": 22,
+            "target_slot": 2,
+            "type": "STRING"
+          },
+          {
+            "id": 35,
+            "origin_id": -10,
+            "origin_slot": 4,
+            "target_id": 20,
+            "target_slot": 0,
+            "type": "IMAGE"
+          },
+          {
+            "id": 37,
+            "origin_id": 9,
+            "origin_slot": 0,
+            "target_id": 24,
+            "target_slot": 0,
+            "type": "IMAGE"
+          },
+          {
+            "id": 38,
+            "origin_id": 24,
+            "origin_slot": 0,
+            "target_id": -20,
+            "target_slot": 2,
+            "type": "VIDEO"
+          },
+          {
+            "id": 42,
+            "origin_id": 9,
+            "origin_slot": 0,
+            "target_id": 28,
+            "target_slot": 0,
+            "type": "IMAGE"
+          },
+          {
+            "id": 44,
+            "origin_id": 28,
+            "origin_slot": 0,
+            "target_id": 24,
+            "target_slot": 1,
+            "type": "STRING"
+          }
+        ],
+        "extra": {
+          "workflowRendererVersion": "LG"
+        }
+      }
+    ]
+  },
+  "config": {},
+  "extra": {
+    "workflowRendererVersion": "LG",
+    "ue_links": [],
+    "links_added_by_ue": [],
+    "frontendVersion": "1.39.19",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true,
+    "ds": {
+      "scale": 0.5784233486252732,
+      "offset": [
+        -568.8180644566776,
+        -506.00886600457807
+      ]
+    }
+  },
+  "version": 0.4
+}
