@@ -986,7 +986,7 @@
           },
           {
             "id": 21,
-            "type": "easy showAnything",
+            "type": "ShowText",
             "pos": [
               562.3367101984016,
               780.3446977584944
@@ -1016,7 +1016,7 @@
               }
             ],
             "properties": {
-              "Node name for S&R": "easy showAnything",
+              "Node name for S&R": "ShowText",
               "widget_ue_connectable": {}
             },
             "widgets_values": [
