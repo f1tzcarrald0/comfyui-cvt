@@ -1,6 +1,6 @@
 [project]
 name = "comfyui-cvt"
-version = "1.0.0"
+version = "1.1.0"
 description = "Cinematic video prompt tools for ComfyUI — ThreeShot sequences, storyboard assembly, scene camera moves, and vision-driven parameter extraction via CLIP, Qwen, Gemini, ChatGPT, or Claude."
 license = { file = "LICENSE" }
 requires-python = ">=3.9"
