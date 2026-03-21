@@ -1,0 +1,302 @@
+{
+  "id": "9f2c703d-2b9c-4360-9ec3-2a8407d8bd1c",
+  "revision": 0,
+  "last_node_id": 11,
+  "last_link_id": 11,
+  "nodes": [
+    {
+      "id": 5,
+      "type": "OpenAIVideoSora2",
+      "pos": [
+        1113.7090867976458,
+        322.44436663654665
+      ],
+      "size": [
+        400,
+        208
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          },
+          "link": 8
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            6
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "OpenAIVideoSora2",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "sora-2",
+        "",
+        "1280x720",
+        8,
+        0,
+        "randomize"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 6,
+      "type": "SaveVideo",
+      "pos": [
+        1598.8915608470766,
+        346.5139510269318
+      ],
+      "size": [
+        270,
+        106
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 6
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "SaveVideo",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "video/ComfyUI",
+        "auto",
+        "auto"
+      ]
+    },
+    {
+      "id": 4,
+      "type": "Note",
+      "pos": [
+        1115.94357217316,
+        615.9880756101157
+      ],
+      "size": [
+        416.92726284486434,
+        353.5113646015327
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "Write your Sora video prompt directly in the text box.\n\nInclude cinematic details like:\n- Scene description and subject\n- Camera motion (push in, orbit, tracking, etc.)\n- Color grading style\n- Mood and atmosphere\n- Lighting characteristics\n\nThe prompt feeds directly into OpenAI Sora for video generation.\n\nTip: For image-driven analysis, use the Image2Control workflow instead."
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 9,
+      "type": "LoadImage",
+      "pos": [
+        -192.29714574884522,
+        272.0978537968119
+      ],
+      "size": [
+        282.798828125,
+        314
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            9
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "Generated Image December 08, 2025 - 1_05PM.jpeg",
+        "image"
+      ]
+    },
+    {
+      "id": 11,
+      "type": "LoadImage",
+      "pos": [
+        -189.56036161291038,
+        1043.8876496954886
+      ],
+      "size": [
+        282.798828125,
+        314.0000000000001
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            11
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "Generated Image February 25, 2026 - 8_54AM.jpeg",
+        "image"
+      ]
+    },
+    {
+      "id": 10,
+      "type": "LoadImage",
+      "pos": [
+        -192.29721535036947,
+        652.5191138727562
+      ],
+      "size": [
+        282.798828125,
+        314
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            10
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "Wolf_fist_frame-hires4.png",
+        "image"
+      ]
+    },
+    {
+      "id": 8,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        534,
+        253
+      ],
+      "size": [
+        400,
+        350
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            8
+          ]
+        }
+      ],
+      "title": "Video Prompt (Sora)",
+      "properties": {
+        "Node name for S&R": "PrimitiveStringMultiline",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "A cinematic scene at golden hour. Edit this prompt with your scene description, including camera motion, color grading, mood, and lighting details.\n\nExample format:\nA sweeping drone shot over misty mountains at dawn. Natural daylight with warm golden tones. Color grade: desaturated earth tones with lifted shadows. Mood: serene and contemplative. The camera slowly orbits counterclockwise, revealing the vast landscape below."
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    }
+  ],
+  "links": [
+    [
+      6,
+      5,
+      0,
+      6,
+      0,
+      "VIDEO"
+    ],
+    [
+      8,
+      8,
+      0,
+      5,
+      1,
+      "STRING"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "workflowRendererVersion": "LG",
+    "ue_links": [],
+    "ds": {
+      "scale": 0.6588450000000011,
+      "offset": [
+        710.8378094660095,
+        186.7636089203521
+      ]
+    },
+    "frontendVersion": "1.39.19",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}

@@ -1,0 +1,467 @@
+{
+  "id": "0703590b-602c-4dfc-9cd4-76584c47259c",
+  "revision": 0,
+  "last_node_id": 21,
+  "last_link_id": 21,
+  "nodes": [
+    {
+      "id": 5,
+      "type": "OpenAIVideoSora2",
+      "pos": [
+        1100,
+        300
+      ],
+      "size": [
+        400,
+        208
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "image",
+          "name": "image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "localized_name": "model",
+          "name": "model",
+          "type": "COMBO",
+          "widget": {
+            "name": "model"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "prompt",
+          "name": "prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          },
+          "link": 3
+        },
+        {
+          "localized_name": "size",
+          "name": "size",
+          "type": "COMBO",
+          "widget": {
+            "name": "size"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "duration",
+          "name": "duration",
+          "type": "COMBO",
+          "widget": {
+            "name": "duration"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "seed",
+          "name": "seed",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "seed"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "VIDEO",
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            4
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "OpenAIVideoSora2",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "sora-2",
+        "",
+        "1280x720",
+        8,
+        0,
+        "randomize"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 6,
+      "type": "SaveVideo",
+      "pos": [
+        1600,
+        340
+      ],
+      "size": [
+        270,
+        106
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "video",
+          "name": "video",
+          "type": "VIDEO",
+          "link": 4
+        },
+        {
+          "localized_name": "filename_prefix",
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "format",
+          "name": "format",
+          "type": "COMBO",
+          "widget": {
+            "name": "format"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "codec",
+          "name": "codec",
+          "type": "COMBO",
+          "widget": {
+            "name": "codec"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "SaveVideo",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "video/ComfyUI",
+        "auto",
+        "auto"
+      ]
+    },
+    {
+      "id": 4,
+      "type": "Note",
+      "pos": [
+        1100,
+        590
+      ],
+      "size": [
+        417,
+        250
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "With this custom node, you can preview a 3 shot sequence quickly with Sora.\n\nThis is the simplified version \u2014 for each of the 3 shots, set a description prompt, camera motion, and shot type from the dropdowns.\n\nThe node builds a prompt that is sent to OpenAI ChatGPT to generate a rich, Sora-optimized video prompt. The ChatGPT output then feeds directly into OpenAI Sora - Video.\n\nThis node creates a pre-prompt for ChatGPT to create your sequence in Sora."
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 12,
+      "type": "OpenAIChatNode",
+      "pos": [
+        1072.47100038704,
+        249.65147341180412
+      ],
+      "size": [
+        400,
+        250
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "images",
+          "name": "images",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "localized_name": "files",
+          "name": "files",
+          "shape": 7,
+          "type": "OPENAI_INPUT_FILES",
+          "link": null
+        },
+        {
+          "localized_name": "advanced_options",
+          "name": "advanced_options",
+          "shape": 7,
+          "type": "OPENAI_CHAT_CONFIG",
+          "link": null
+        },
+        {
+          "localized_name": "prompt",
+          "name": "prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          },
+          "link": 1
+        },
+        {
+          "localized_name": "persist_context",
+          "name": "persist_context",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "persist_context"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "model",
+          "name": "model",
+          "type": "COMBO",
+          "widget": {
+            "name": "model"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "STRING",
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            3
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "OpenAIChatNode",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "",
+        false,
+        "gpt-4o"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 8,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        180,
+        310
+      ],
+      "size": [
+        400,
+        150
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            20
+          ]
+        }
+      ],
+      "title": "System Prompt",
+      "properties": {
+        "Node name for S&R": "PrimitiveStringMultiline",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "You are a cinematic video prompt writer for Sora 2. Given a 3-shot sequence with camera motion and framing for each shot, write a single cohesive, vivid video prompt optimized for Sora 2 video generation. Keep each shot to 80\u2013150 words of rich prose. Front-load the most important visual details in each shot. Output only the final prompt with Shot 1, Shot 2, Shot 3 sections."
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 21,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        180,
+        520
+      ],
+      "size": [
+        400,
+        350
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            21
+          ]
+        }
+      ],
+      "title": "Shot Details (edit your 3-shot sequence)",
+      "properties": {
+        "Node name for S&R": "PrimitiveStringMultiline",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "Overall style: [your visual style here]\n\nSubject (consistent across all shots): [describe your subject]\n\nShot 1:\n  Description: [what happens in shot 1]\n  Camera motion: drone flyover\n  Shot type: extreme wide shot (EWS)\n\nShot 2:\n  Description: [what happens in shot 2]\n  Camera motion: slow orbit counterclockwise\n  Shot type: extreme wide shot (EWS)\n\nShot 3:\n  Description: [what happens in shot 3]\n  Camera motion: whip pan right\n  Shot type: extreme wide shot (EWS)"
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 20,
+      "type": "StringConcatenate",
+      "pos": [
+        680,
+        400
+      ],
+      "size": [
+        300,
+        120
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "string_a",
+          "type": "STRING",
+          "widget": {
+            "name": "string_a"
+          },
+          "link": 20
+        },
+        {
+          "name": "string_b",
+          "type": "STRING",
+          "widget": {
+            "name": "string_b"
+          },
+          "link": 21
+        },
+        {
+          "name": "delimiter",
+          "type": "STRING",
+          "widget": {
+            "name": "delimiter"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            1
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "StringConcatenate",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "",
+        "",
+        "\n\n"
+      ]
+    }
+  ],
+  "links": [
+    [
+      3,
+      12,
+      0,
+      5,
+      2,
+      "STRING"
+    ],
+    [
+      4,
+      5,
+      0,
+      6,
+      0,
+      "VIDEO"
+    ],
+    [
+      1,
+      20,
+      0,
+      12,
+      3,
+      "STRING"
+    ],
+    [
+      20,
+      8,
+      0,
+      20,
+      0,
+      "STRING"
+    ],
+    [
+      21,
+      21,
+      0,
+      20,
+      1,
+      "STRING"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "workflowRendererVersion": "LG",
+    "ue_links": [],
+    "ds": {
+      "scale": 0.6588450000000011,
+      "offset": [
+        797.9516697062785,
+        354.4991442131747
+      ]
+    },
+    "frontendVersion": "1.39.19",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}

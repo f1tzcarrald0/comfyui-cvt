@@ -892,7 +892,6 @@
                 "name": "STRING",
                 "type": "STRING",
                 "links": [
-                  29,
                   46
                 ]
               }
@@ -983,45 +982,6 @@
             ],
             "color": "#432",
             "bgcolor": "#653"
-          },
-          {
-            "id": 21,
-            "type": "ShowText",
-            "pos": [
-              562.3367101984016,
-              780.3446977584944
-            ],
-            "size": [
-              559.1737790524396,
-              460.2904305264899
-            ],
-            "flags": {},
-            "order": 1,
-            "mode": 0,
-            "inputs": [
-              {
-                "localized_name": "anything",
-                "name": "anything",
-                "shape": 7,
-                "type": "*",
-                "link": 29
-              }
-            ],
-            "outputs": [
-              {
-                "localized_name": "output",
-                "name": "output",
-                "type": "*",
-                "links": null
-              }
-            ],
-            "properties": {
-              "Node name for S&R": "ShowText",
-              "widget_ue_connectable": {}
-            },
-            "widgets_values": [
-              "Extreme wide establishing telephoto shot (85–135mm look) of a solitary man walking to work along a city block at early morning. Long‑lens compression with shallow depth isolates him against storefronts while foreground poles and passing cars smear into soft bokeh. Lighting: natural dawn paired with glowing practical shop windows and lingering string lights, a gentle backlight edging his coat and soft bounce from pale walls; highlights halate realistically. Color grade: high‑contrast black‑and‑white with fine film grain, deep blacks and silvery midtones. Mood: quiet, introspective, restrained. The camera glides in a smooth lateral track that parallels his pace with occasional subtle dolly drift; rich parallax from fences, signposts, and pedestrians keeps space coherent. Wind lifts his collar, breath and street steam drift, paper skitters, and distant buses rumble—grounded, physical realism."
-            ]
           }
         ],
         "groups": [],
@@ -1048,14 +1008,6 @@
             "origin_slot": 0,
             "target_id": 20,
             "target_slot": 3,
-            "type": "STRING"
-          },
-          {
-            "id": 29,
-            "origin_id": 20,
-            "origin_slot": 0,
-            "target_id": 21,
-            "target_slot": 0,
             "type": "STRING"
           },
           {
